@@ -40,8 +40,8 @@ EOF
 
 rm -f packages.microsoft.gpg
 
-apt-get update
-apt-get install -y \
+apt update
+apt install -y \
         code \
         firefox \
         gedit \
