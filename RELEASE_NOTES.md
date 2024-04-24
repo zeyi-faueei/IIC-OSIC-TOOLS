@@ -2,6 +2,11 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
+## 2024.04
+
+* Remove `fault` (and `atalanta` and Swift).
+* Update various tool versions.
+
 ## 2024.03
 
 * Add `synlig` (SystemVerilog plugin for Yosys).

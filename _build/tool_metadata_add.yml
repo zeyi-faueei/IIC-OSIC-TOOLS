@@ -4,9 +4,6 @@
 - name: cvc_rv
   repo: https://github.com/d-m-bailey/cvc
   commit: v1.1.5
-- name: fault
-  repo: https://github.com/AUCOHL/Fault
-  commit: 90b1192f7823fb99f3094bf3848b9e2e26a5181f
 - name: gaw3-xschem
   repo: https://github.com/StefanSchippers/xschem-gaw.git
   commit: 640c672e1ad768b92eb6a15943459a1d2214e1dc

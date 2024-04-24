@@ -39,7 +39,6 @@ function _path_add_tool_python() {
 if [ -z ${FOSS_PATH_SET+x} ]; then
         _path_add_tool_bin      "covered"
         _path_add_tool_bin      "cvc_rv"
-        _path_add_tool          "fault"
         _path_add_tool_bin      "gaw3-xschem"
         _path_add_tool_bin      "gds3d"
         _path_add_tool_bin      "ghdl"
@@ -71,7 +70,7 @@ if [ -z ${FOSS_PATH_SET+x} ]; then
 	_path_add_tool_custom   "align-utils"
 	
         export SAK=$TOOLS/sak/
-        export PATH=$TOOLS/bin:$SAK:/usr/local/sbin:$PATH:/opt/atalanta:/opt/swift/usr/bin
+        export PATH=$TOOLS/bin:$SAK:/usr/local/sbin:$PATH
 
         # FIXME: OpenROAD in Ubuntu 22.04 does not find the PIP modules, so use PYTHONPATH
         PYTHONPATH=$(python -c "import sys; print(':'.join(x for x in sys.path if x))") && export PYTHONPATH 
@@ -90,7 +89,6 @@ fi
 # shellcheck disable=SC2086
 LD_LIBRARY_PATH="$(realpath ${TOOLS}/klayout/*/ ):${TOOLS}/ngspice/ngspice/lib" && export LD_LIBRARY_PATH
 export XDG_RUNTIME_DIR=/tmp/runtime-default
-export ATALANTA_MAN=/usr/local/share/atalanta
 export OPENLANE_ROOT=$TOOLS/openlane
 export EDITOR='gedit'
 export PYTHONPYCACHEPREFIX="/tmp/pycache"
