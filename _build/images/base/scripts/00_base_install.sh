@@ -92,6 +92,7 @@ apt-get -y install \
 	libpcre2-dev \
 	libpcre3-dev \
 	libpython3.10 \
+	libqhull-dev \
 	libqt5multimediawidgets5 \
 	libqt5svg5-dev \
 	libqt5xmlpatterns5-dev \

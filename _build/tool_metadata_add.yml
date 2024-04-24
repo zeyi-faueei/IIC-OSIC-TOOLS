@@ -15,22 +15,22 @@
   commit: 173da0cc2f3804984b7e77862fbb0c3f4e308a4b
 - name: ghdl
   repo: https://github.com/ghdl/ghdl.git
-  commit: f845482a2d3d98434d4b051cb2bccefaea73971d
+  commit: 76e460880c31b771f082920a4fbefc47fd6a0485
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
   commit: 0c4740a4f8f1e615cc587b3cd3849fa23a623862
 - name: gtkwave
   repo: https://github.com/gtkwave/gtkwave
-  commit: c2f445fac971d929e01853fb791258ca1c7b3cfb
+  commit: ab54185373dd77b7f498d7bd35f5c310d2435a24
 - name: irsim
   repo: https://github.com/rtimothyedwards/irsim
   commit: a7884acc04cd94017779893d381b7e93d8895587
 - name: iverilog
   repo: https://github.com/steveicarus/iverilog.git
-  commit: 52d049b513dfa520e74f5abbf1acdda76650c499
+  commit: 35f344adf9a3f6ea9775802c6b1c43228f0463b5
 - name: klayout
   repo: https://github.com/KLayout/klayout
-  commit: v0.28.17
+  commit: v0.29.0
 - name: libman
   repo: https://github.com/IHP-GmbH/LibMan
   commit: a4537c1fba19966e80408a7b224001d5697ff1e6
@@ -42,16 +42,16 @@
   commit: 154a2724080e3bf15827549bba9f315cd11984fe
 - name: nvc
   repo: https://github.com/nickg/nvc
-  commit: r1.11.3
+  commit: r1.12.0
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
-  commit: 84f4323e39661cd1b83bc79a36389f3d16a2ce2e
+  commit: d78ceaac44cf771a17f7007039ead8bada634488
 - name: pyopus
   repo: https://fides.fe.uni-lj.si/pyopus/download
   commit: "0.11"
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: ebe4772ca4e2678ea66e1617bb0877e5d0ef10b6
+  commit: a792bb11d28286a9658dafff348e388cc1104773
 - name: synlig-yosys-plugin
   repo: https://github.com/chipsalliance/synlig.git
   commit: d844d8d88520e07fa8c6e400ce5a117f7afee700
@@ -60,10 +60,10 @@
   commit: 7314066deb9543436c76c817015f8554f09efdb0
 - name: qucs-s
   repo: https://github.com/ra3xdh/qucs_s
-  commit: "24.2.0"
+  commit: "24.2.1"
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: fc19e646c7f2e8c83aeb05b7cd792ea0fd6ce4f2
+  commit: 83f62bfdf903a38f6f716edcc445df26927db00c
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
   commit: Release-7.8.0
