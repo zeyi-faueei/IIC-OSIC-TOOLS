@@ -14,10 +14,6 @@ Example:
 
 The visualization tool "AppCSXCAD" will not work in the container with our default settings (`vtkXOpenGLRenderWindow (0x....): Cannot create GLX context.  Aborting.`). The issue has been located to be connected with the environment variable "LIBGL_ALWAYS_INDIRECT". As a workaround, we suggest either unsetting the variable or setting it to 0 (`unset LIBGL_ALWAYS_INDIRECT` or `export LIBGL_ALWAYS_INDIRECT=0`) which is persistent for the running terminal or run AppCSXCAD with the variable set to zero inline: `LIBGL_ALWAYS_INDIRECT=0 AppCSXCAD`.
 
-### Fault
-
-The package `fault` is currently not building correctly on macOS `aarch64`, thus it is only available for `amd64`.
-
 ### Align
 
 The package `align` is currently not building correctly on `aarch64`, thus it is only available for `amd64`.
@@ -25,6 +21,10 @@ The package `align` is currently not building correctly on `aarch64`, thus it is
 ### hdl21
 
 The package `hdl21` is temporarily removed, as the build fails.
+
+### gdsfactory
+
+The package `gdsfactory` is temporarily pinned to 7.10, as the build of `gdstk` on 0.10+ fails on `aarch64` due to an issue with the `pathspec` version.
 
 ## Build
 
