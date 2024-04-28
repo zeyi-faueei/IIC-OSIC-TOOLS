@@ -297,7 +297,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 FROM base as xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="5a4b2cc6e0ca30cdb3e1822de9a3e94ffcbdfd33"
+ARG XSCHEM_REPO_COMMIT="83f62bfdf903a38f6f716edcc445df26927db00c"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
