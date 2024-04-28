@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base as ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="76e460880c31b771f082920a4fbefc47fd6a0485"
+ARG GHDL_REPO_COMMIT="bb512797c9df41e330cffde4284bc19a1282ce5e"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -127,7 +127,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 FROM base as gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="ab54185373dd77b7f498d7bd35f5c310d2435a24"
+ARG GTKWAVE_REPO_COMMIT="dbd99a8991a6d0eddd1b9c3d3f02c686c9a8c14f"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -147,7 +147,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 FROM base as iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
-ARG IVERILOG_REPO_COMMIT="35f344adf9a3f6ea9775802c6b1c43228f0463b5"
+ARG IVERILOG_REPO_COMMIT="615a01c6cd3150bec5c94776a17381fe5bb328de"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
@@ -277,7 +277,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 FROM base as slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="a792bb11d28286a9658dafff348e388cc1104773"
+ARG SLANG_REPO_COMMIT="ec1184b6f26614e6939f5809093b9d81429d8c57"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -297,7 +297,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 FROM base as xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="83f62bfdf903a38f6f716edcc445df26927db00c"
+ARG XSCHEM_REPO_COMMIT="5a4b2cc6e0ca30cdb3e1822de9a3e94ffcbdfd33"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh

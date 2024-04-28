@@ -12,19 +12,19 @@
   commit: 173da0cc2f3804984b7e77862fbb0c3f4e308a4b
 - name: ghdl
   repo: https://github.com/ghdl/ghdl.git
-  commit: 76e460880c31b771f082920a4fbefc47fd6a0485
+  commit: bb512797c9df41e330cffde4284bc19a1282ce5e
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
   commit: 0c4740a4f8f1e615cc587b3cd3849fa23a623862
 - name: gtkwave
   repo: https://github.com/gtkwave/gtkwave
-  commit: ab54185373dd77b7f498d7bd35f5c310d2435a24
+  commit: dbd99a8991a6d0eddd1b9c3d3f02c686c9a8c14f
 - name: irsim
   repo: https://github.com/rtimothyedwards/irsim
   commit: a7884acc04cd94017779893d381b7e93d8895587
 - name: iverilog
   repo: https://github.com/steveicarus/iverilog.git
-  commit: 35f344adf9a3f6ea9775802c6b1c43228f0463b5
+  commit: 615a01c6cd3150bec5c94776a17381fe5bb328de
 - name: klayout
   repo: https://github.com/KLayout/klayout
   commit: v0.29.0
@@ -48,7 +48,7 @@
   commit: "0.11"
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: a792bb11d28286a9658dafff348e388cc1104773
+  commit: ec1184b6f26614e6939f5809093b9d81429d8c57
 - name: synlig-yosys-plugin
   repo: https://github.com/chipsalliance/synlig.git
   commit: d844d8d88520e07fa8c6e400ce5a117f7afee700
@@ -60,7 +60,7 @@
   commit: "24.2.1"
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: 83f62bfdf903a38f6f716edcc445df26927db00c
+  commit: 5a4b2cc6e0ca30cdb3e1822de9a3e94ffcbdfd33
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
   commit: Release-7.8.0
