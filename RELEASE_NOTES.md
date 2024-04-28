@@ -4,6 +4,7 @@ This document summarizes the most important changes of the individual releases o
 
 ## 2024.04
 
+* This will be the last release using OpenLane(1). We will switch to OpenLane2 going forward.
 * Remove `fault` (and `atalanta` and Swift).
 * Update various tool versions.
 
