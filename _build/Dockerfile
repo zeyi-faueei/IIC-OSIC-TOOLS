@@ -65,7 +65,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
 #######################################################################
 FROM osic-multitool as open_pdks
 ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
-ARG OPEN_PDKS_REPO_COMMIT="1.0.480"
+ARG OPEN_PDKS_REPO_COMMIT="6d4d11780c40b20ee63cc98e645307a9bf2b2ab8"
 ARG OPEN_PDKS_NAME="open_pdks"
 RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
     bash /images/open_pdks/scripts/install_volare.sh
@@ -317,6 +317,15 @@ FROM base as yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
 ARG YOSYS_REPO_COMMIT="yosys-0.40"
 ARG YOSYS_NAME="yosys"
+ARG YOSYS_EQY_REPO_URL="https://github.com/YosysHQ/eqy.git"
+ARG YOSYS_EQY_REPO_COMMIT="eeb03760a9caaf10edff3cfc707a17b20453b7ae"
+ARG YOSYS_EQY_NAME="yosys_eqy"
+ARG YOSYS_SBY_REPO_URL="https://github.com/YosysHQ/sby.git"
+ARG YOSYS_SBY_REPO_COMMIT="7dd287f287a4e6ed5ea37026df90276b360482b8"
+ARG YOSYS_SBY_NAME="yosys_sby"
+ARG YOSYS_MCY_REPO_URL="https://github.com/YosysHQ/mcy.git"
+ARG YOSYS_MCY_REPO_COMMIT="9142c9369d76f90a78d8bcb46ca7c2a631d49c03"
+ARG YOSYS_MCY_NAME="yosys_mcy"
 RUN --mount=type=bind,source=images/yosys,target=/images/yosys \
     bash /images/yosys/scripts/install.sh
 

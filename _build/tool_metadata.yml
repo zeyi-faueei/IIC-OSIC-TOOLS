@@ -48,7 +48,7 @@
   commit: r1.12.0
 - name: open_pdks
   repo: https://github.com/RTimothyEdwards/open_pdks
-  commit: 1.0.480
+  commit: 6d4d11780c40b20ee63cc98e645307a9bf2b2ab8
 - name: openroad_app
   repo: https://github.com/The-OpenROAD-Project/OpenROAD
   commit: 88e1db3ae437374034626b3327d4156e856e2b4b
@@ -91,3 +91,13 @@
 - name: yosys
   repo: https://github.com/YosysHQ/yosys
   commit: yosys-0.40
+- name: yosys_eqy
+  repo: https://github.com/YosysHQ/eqy.git
+  commit: eeb03760a9caaf10edff3cfc707a17b20453b7ae
+- name: yosys_sby
+  repo: https://github.com/YosysHQ/sby.git
+  commit: 7dd287f287a4e6ed5ea37026df90276b360482b8
+- name: yosys_mcy
+  repo: https://github.com/YosysHQ/mcy.git
+  commit: 9142c9369d76f90a78d8bcb46ca7c2a631d49c03
+
