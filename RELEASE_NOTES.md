@@ -5,6 +5,7 @@ This document summarizes the most important changes of the individual releases o
 ## 2024.05
 
 * Changing from OpenLane(1) to OpenLane2. OpenLane(1) is removed from the image. The tool versions of OpenLane2 are now set to latest release, instead of pinned (older) versions.
+* Remove ALIGN (has only been included in `amd64` version, not in `arm64`).
 
 ## 2024.04
 

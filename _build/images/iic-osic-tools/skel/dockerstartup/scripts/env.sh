@@ -66,7 +66,6 @@ if [ -z ${FOSS_PATH_SET+x} ]; then
         _path_add_tool_bin      "xyce/Parallel"
         _path_add_tool_bin      "yosys"
         _path_add_tool_custom   "yosys/bin"
-	_path_add_tool_custom   "align-utils"
 	
         export SAK=$TOOLS/sak/
         export PATH=$TOOLS/bin:$SAK:/usr/local/sbin:$PATH
@@ -74,7 +73,6 @@ if [ -z ${FOSS_PATH_SET+x} ]; then
         # FIXME: OpenROAD in Ubuntu 22.04 does not find the PIP modules, so use PYTHONPATH
         PYTHONPATH=$(python -c "import sys; print(':'.join(x for x in sys.path if x))") && export PYTHONPATH 
         _path_add_tool_python "ngspyce"
-        _path_add_tool_python "align"
         _path_add_tool_python "pyopus"
         export PYTHONPATH=$PYTHONPATH:$TOOLS/yosys/share/yosys/python3
         KLAYOUT_PYTHON=("$TOOLS"/klayout/*/pymod)
@@ -95,7 +93,6 @@ export PYTHONPYCACHEPREFIX="/tmp/pycache"
 export PDK=sky130A
 export PDKPATH=$PDK_ROOT/$PDK
 export STD_CELL_LIBRARY=sky130_fd_sc_hd
-export ALIGN_PDKPATH=${TOOLS}/align-pdk-sky130/SKY130_PDK
 
 
 # FIXME: this gets rid of a few libGL errors

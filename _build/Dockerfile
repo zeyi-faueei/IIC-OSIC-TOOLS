@@ -347,27 +347,6 @@ RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yo
     bash /images/synlig-yosys-plugin/scripts/install.sh
 
 #######################################################################
-# Compile ALIGN-analoglayout
-#######################################################################
-FROM basepkg as align
-ARG ALIGN_REPO_URL="https://github.com/ALIGN-analoglayout/ALIGN-public.git"
-ARG ALIGN_REPO_COMMIT="d3954af5ba4deab3c7daec4a0e5fd866d65ef75c"
-ARG ALIGN_NAME="align"
-RUN --mount=type=bind,source=images/align,target=/images/align \
-    bash /images/align/scripts/install.sh
-
-#######################################################################
-# Compile ALIGN-analoglayout-sky130
-#######################################################################
-FROM base as align-pdk-sky130
-# FIXME using a forked PDK since a few changes needed
-ARG ALIGN_PDK_SKY130_REPO_URL="https://github.com/iic-jku/ALIGN-pdk-sky130.git"
-ARG ALIGN_PDK_SKY130_REPO_COMMIT="856e568f809c54580e82e077e93aff98c509b451"
-ARG ALIGN_PDK_SKY130_NAME="align-pdk-sky130"
-RUN --mount=type=bind,source=images/align-pdk-sky130,target=/images/align-pdk-sky130 \
-    bash /images/align-pdk-sky130/scripts/install.sh
-
-#######################################################################
 # Compile different components for the rftoolkit
 #######################################################################
 FROM base as rftoolkit
@@ -438,11 +417,6 @@ COPY --from=xyce-xdm                     ${TOOLS}/              ${TOOLS}/
 COPY --from=yosys                        ${TOOLS}/              ${TOOLS}/
 COPY --from=ghdl-yosys-plugin            ${TOOLS}_add/          ${TOOLS}/
 COPY --from=synlig-yosys-plugin          ${TOOLS}_add/          ${TOOLS}/
-COPY --from=align                        ${TOOLS}/              ${TOOLS}/
-COPY --from=align-pdk-sky130             ${TOOLS}/              ${TOOLS}/
-
-# Add design scripts and examples
-ADD images/align-utils ${TOOLS}/align-utils
 
 # Copy skeleton and tool version file
 COPY images/iic-osic-tools/skel /
