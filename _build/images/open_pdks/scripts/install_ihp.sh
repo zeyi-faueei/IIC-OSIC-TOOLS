@@ -16,7 +16,6 @@ MY_PDK="sg13g2"
 cd /tmp || exit
 #git clone --depth=1 https://github.com/IHP-GmbH/IHP-Open-PDK.git ihp
 git clone https://github.com/IHP-GmbH/IHP-Open-PDK.git ihp
-#git clone https://github.com/iic-jku/IHP-Open-PDK.git ihp
 cd ihp || exit
 #FIXME for now uses branch "dev" to get the latest releases
 git checkout dev
