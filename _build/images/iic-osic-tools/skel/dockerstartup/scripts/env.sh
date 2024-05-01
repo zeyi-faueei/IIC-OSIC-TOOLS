@@ -51,7 +51,6 @@ if [ -z ${FOSS_PATH_SET+x} ]; then
         _path_add_tool_bin      "netgen"
         _path_add_tool_bin      "ngspice"
         _path_add_tool_bin      "nvc"
-        _path_add_tool          "openlane"
         _path_add_tool_bin      "openroad"
         _path_add_tool_bin      "opensta"
 	_path_add_tool_bin	"openvaf"
@@ -89,7 +88,6 @@ fi
 # shellcheck disable=SC2086
 LD_LIBRARY_PATH="$(realpath ${TOOLS}/klayout/*/ ):${TOOLS}/ngspice/ngspice/lib" && export LD_LIBRARY_PATH
 export XDG_RUNTIME_DIR=/tmp/runtime-default
-export OPENLANE_ROOT=$TOOLS/openlane
 export EDITOR='gedit'
 export PYTHONPYCACHEPREFIX="/tmp/pycache"
 

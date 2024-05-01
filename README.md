@@ -81,10 +81,9 @@ Below is a list of the current tools already installed and ready to use (note th
 * [ngspyce](https://github.com/ignamv/ngspyce) Python bindings for `ngspice`
 * [nvc](https://github.com/nickg/nvc) VHDL simulator and compiler
 * [open_pdks](https://github.com/RTimothyEdwards/open_pdks) PDK setup scripts
-* [openlane](https://github.com/The-OpenROAD-Project/OpenLane) digital RTL2GDS flow
 * [openlane2](https://github.com/efabless/openlane2) rewrite of OpenLane in Python, 2nd generation
 * [openram](https://github.com/VLSIDA/OpenRAM) OpenRAM Python library
-* [openroad](https://github.com/The-OpenROAD-Project/OpenROAD.git) RTL2GDS engine used by `openlane` and `openlane2`
+* [openroad](https://github.com/The-OpenROAD-Project/OpenROAD.git) RTL2GDS engine used by `openlane2`
 * [osic-multitool](https://github.com/iic-jku/osic-multitool.git) collection of useful scripts and documentation
 * [padring](https://github.com/donn/padring) padring generation tool
 * [pyopus](https://fides.fe.uni-lj.si/pyopus/index.html) simulation runner and optimization tool for analog circuits
@@ -108,7 +107,7 @@ Below is a list of the current tools already installed and ready to use (note th
 * [xyce](https://github.com/Xyce/Xyce.git) fast parallel SPICE simulator (incl. `xdm` netlist conversion tool)
 * [yosys](https://github.com/YosysHQ/yosys) Verilog synthesis tool (with GHDL plugin for VHDL synthesis), incl. `eqy` (equivalence checker), `sby` (formal verification), and `mcy` (mutation coverage)
 
-The tool versions used for `OpenLane` are documented in `tool_metadata.yml` and the other tools in `tool_metadata_add.yml`. In addition to the EDA tools above, further valuable tools (like `git`) and editors (like `gvim`) are installed. If something useful is missing, please let us know!
+The tool versions used for `OpenLane2` (and other tools) are documented in `tool_metadata.yml`. In addition to the EDA tools above, further valuable tools (like `git`) and editors (like `gvim`) are installed. If something useful is missing, please let us know!
 
 ## Quick Launch for Designers
 

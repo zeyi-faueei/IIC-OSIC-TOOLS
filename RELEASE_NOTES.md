@@ -2,6 +2,10 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
+## 2024.05
+
+* Changing from OpenLane(1) to OpenLane2. OpenLane(1) is removed from the image. The tool versions of OpenLane2 are now set to latest release, instead of pinned (older) versions.
+
 ## 2024.04
 
 * This will be the last release using OpenLane(1). We will switch to OpenLane2 going forward.

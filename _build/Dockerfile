@@ -29,7 +29,7 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
     bash /images/base/scripts/99_basepkg_install.sh
 
 #######################################################################
-# Compile magic (part of OpenLane)
+# Compile magic
 #######################################################################
 FROM basepkg as magic
 ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
@@ -61,7 +61,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
     bash /images/osic-multitool/scripts/install.sh
 
 #######################################################################
-# Create open_pdks (part of OpenLane)
+# Create open_pdks
 #######################################################################
 FROM osic-multitool as open_pdks
 ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
@@ -153,7 +153,7 @@ RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
 
 #######################################################################
-# Compile klayout (part of OpenLane)
+# Compile klayout
 #######################################################################
 FROM basepkg as klayout
 ARG KLAYOUT_REPO_URL="https://github.com/KLayout/klayout"
@@ -173,7 +173,7 @@ RUN --mount=type=bind,source=images/libman,target=/images/libman \
     bash /images/libman/scripts/install.sh
 
 #######################################################################
-# Compile netgen (part of OpenLane)
+# Compile netgen
 #######################################################################
 FROM base as netgen
 ARG NETGEN_REPO_URL="https://github.com/rtimothyedwards/netgen"
@@ -213,17 +213,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
     bash /images/nvc/scripts/install.sh
 
 #######################################################################
-# Compile openlane (part of OpenLane)
-#######################################################################
-FROM basepkg as openlane
-ARG OPENLANE_REPO_URL="https://github.com/The-OpenROAD-Project/OpenLane"
-ARG OPENLANE_REPO_COMMIT="2024.04.04"
-ARG OPENLANE_NAME="openlane"
-RUN --mount=type=bind,source=images/openlane,target=/images/openlane \
-    bash /images/openlane/scripts/install.sh
-
-#######################################################################
-# Compile openroad (part of OpenLane)
+# Compile openroad
 #######################################################################
 FROM base as openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
@@ -233,7 +223,7 @@ RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
     bash /images/openroad/scripts/install.sh
 
 #######################################################################
-# Compile padring (part of OpenLane)
+# Compile padring
 #######################################################################
 FROM base as padring
 ARG PADRING_REPO_URL="https://github.com/donn/padring"
@@ -283,7 +273,7 @@ RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
 
 #######################################################################
-# Compile verilator (part of OpenLane)
+# Compile verilator
 #######################################################################
 FROM base as verilator
 ARG VERILATOR_REPO_URL="https://github.com/verilator/verilator"
@@ -321,7 +311,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
     bash /images/xyce-xdm/scripts/install.sh
 
 #######################################################################
-# Compile yosys (part of OpenLane) & ghdl plugin & synlig plugin
+# Compile yosys & ghdl plugin & synlig plugin
 #######################################################################
 FROM base as yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
@@ -423,7 +413,6 @@ COPY --from=netgen                       ${TOOLS}/              ${TOOLS}/
 COPY --from=nvc                          ${TOOLS}/              ${TOOLS}/
 COPY --from=ngspice                      ${TOOLS}/              ${TOOLS}/
 COPY --from=ngspyce                      ${TOOLS}/              ${TOOLS}/
-COPY --from=openlane                     ${TOOLS}/              ${TOOLS}/
 COPY --from=openroad_app                 ${TOOLS}/              ${TOOLS}/
 COPY --from=osic-multitool               ${TOOLS}/              ${TOOLS}/
 COPY --from=openvaf                      ${TOOLS}/              ${TOOLS}/
@@ -446,7 +435,7 @@ COPY --from=align-pdk-sky130             ${TOOLS}/              ${TOOLS}/
 # Add design scripts and examples
 ADD images/align-utils ${TOOLS}/align-utils
 
-# Copy skeleton and tool version file for OpenLane
+# Copy skeleton and tool version file
 COPY images/iic-osic-tools/skel /
 COPY tool_metadata.yml /
 
