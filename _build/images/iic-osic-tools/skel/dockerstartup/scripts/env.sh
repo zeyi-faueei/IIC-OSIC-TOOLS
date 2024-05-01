@@ -129,6 +129,9 @@ alias xschemtcl='\xschem --rcfile $PDKPATH/libs.tech/xschem/xschemrc'
 #FIXME WA for OpenLane2 until ticket is merged into OpenROAD, see https://github.com/efabless/openlane2/issues/440
 alias openlane='openlane --manual-pdk --skip Odb.CheckDesignAntennaProperties --skip Odb.CheckMacroAntennaProperties'
 
+#FIXME Show hint that OpenLane(1) has been removed
+alias flow.tcl='printf "[INFO] OpenLane(1) has been depreciated.\n[INFO] Please use OpenLane2 (start with <openlane>).\n"'
+
 alias iic-pdk='source iic-pdk-script.sh'
 alias tt='cd $TOOLS'
 alias dd='cd $DESIGNS'
