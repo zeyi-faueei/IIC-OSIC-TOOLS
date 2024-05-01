@@ -26,10 +26,6 @@ The package `hdl21` is temporarily removed, as the build fails.
 
 The package `gdsfactory` is temporarily pinned to 7.10, as the build of `gdstk` on 0.10+ fails on `aarch64` due to an issue with the `pathspec` version.
 
-### OpenLane2
-
-OL2 is currently broken due to outdated `yosys` version. This will be fixed in the next release where we will drop OpenLane(1) and default to OpenLane2 and its dependencies.
-
 ## Build
 
 ### Boost
