@@ -1,14 +1,33 @@
 #!python3
+# ========================================================================
+# Update tool versions from YAML manifest file
+#
+# SPDX-FileCopyrightText: 2022-2024 Harald Pretl and Georg Zachl
+# Johannes Kepler University, Institute for Integrated Circuits
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0
+# ========================================================================
+
 import argparse
 import tools_lib.dockerfile_manipulator as df_man
 import tools_lib.yaml_manipulator as yaml_man
 
-
 if __name__ == "__main__":
-    prs = argparse.ArgumentParser(description="Update the tool commits/revisions from a local yaml file (e.g.: tool_metadata_add.yml)")
+    prs = argparse.ArgumentParser(description="Update the tool commits/revisions from a local yaml file (e.g.: tool_metadata.yml)")
     prs.add_argument("--dry-run", action="store_true", help="Disable writing the Dockerfile, just print the results.")
     prs.add_argument("--dockerfile-path", action="store", type=str, default="Dockerfile", help="Change the location of the Dockerfile involved.")
-    prs.add_argument("--metadata-path", action="store", type=str, default="tool_metadata_add.yml", help="Change the location of the tool_metadata_add.yml input file.")
+    prs.add_argument("--metadata-path", action="store", type=str, default="tool_metadata.yml", help="Change the location of the tool_metadata.yml input file.")
 
     args = prs.parse_args()
 
