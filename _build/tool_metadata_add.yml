@@ -31,6 +31,12 @@
 - name: libman
   repo: https://github.com/IHP-GmbH/LibMan
   commit: a4537c1fba19966e80408a7b224001d5697ff1e6
+- name: magic
+  repo: https://github.com/rtimothyedwards/magic
+  commit: 0afe4d87d4aacfbbb2659129a1858a22d216a920
+- name: netgen
+  repo: https://github.com/rtimothyedwards/netgen
+  commit: 87d8759a6980d297edcb9be6f8661867e4726f9a
 - name: ngspice
   repo: https://github.com/danchitnis/ngspice-sf-mirror
   commit: ngspice-42
@@ -40,9 +46,20 @@
 - name: nvc
   repo: https://github.com/nickg/nvc
   commit: r1.12.0
+- name: open_pdks
+  repo: https://github.com/RTimothyEdwards/open_pdks
+  commit: cd1748bb197f9b7af62a54507de6624e30363943
+  in_install: false
+  pdk: true
+- name: openroad_app
+  repo: https://github.com/The-OpenROAD-Project/OpenROAD
+  commit: 0889970d1790a2617e69f253221b8bd7626e51dc
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
   commit: d78ceaac44cf771a17f7007039ead8bada634488
+- name: padring
+  repo: https://github.com/donn/padring
+  commit: b2a64abcc8561d758c0bcb3945117dcb13bd9dca
 - name: pyopus
   repo: https://fides.fe.uni-lj.si/pyopus/download
   commit: "0.11"
@@ -58,6 +75,12 @@
 - name: qucs-s
   repo: https://github.com/ra3xdh/qucs_s
   commit: "24.2.1"
+- name: verilator
+  repo: https://github.com/verilator/verilator
+  commit: 67dfa37c560385827218350ea936eb1baf604240
+- name: vlogtoverilog
+  repo: https://github.com/RTimothyEdwards/qflow
+  commit: a550469b63e910ede6e3022e2886bca96462c540
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
   commit: 83f62bfdf903a38f6f716edcc445df26927db00c
@@ -67,3 +90,6 @@
 - name: xyce-xdm
   repo: https://github.com/Xyce/XDM
   commit: Release-2.7.0
+- name: yosys
+  repo: https://github.com/YosysHQ/yosys
+  commit: 4a1b5599258881f579a2d95274754bcd8fc171bd
