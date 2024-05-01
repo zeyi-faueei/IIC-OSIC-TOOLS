@@ -33,7 +33,7 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
 #######################################################################
 FROM basepkg as magic
 ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
-ARG MAGIC_REPO_COMMIT="0afe4d87d4aacfbbb2659129a1858a22d216a920"
+ARG MAGIC_REPO_COMMIT="8.3.475"
 ARG MAGIC_NAME="magic"
 COPY images/magic/scripts/install.sh install.sh
 RUN --mount=type=bind,source=images/magic,target=/images/magic \
@@ -65,7 +65,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
 #######################################################################
 FROM osic-multitool as open_pdks
 ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
-ARG OPEN_PDKS_REPO_COMMIT="cd1748bb197f9b7af62a54507de6624e30363943"
+ARG OPEN_PDKS_REPO_COMMIT="1.0.480"
 ARG OPEN_PDKS_NAME="open_pdks"
 RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
     bash /images/open_pdks/scripts/install_volare.sh
@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base as ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="bb512797c9df41e330cffde4284bc19a1282ce5e"
+ARG GHDL_REPO_COMMIT="0d97a760fe3744aaf4a58e898481a37427a2349b"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -127,7 +127,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 FROM base as gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="dbd99a8991a6d0eddd1b9c3d3f02c686c9a8c14f"
+ARG GTKWAVE_REPO_COMMIT="cca09d4befcc7e7b56d817535bc623d7d19c9b1d"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -177,7 +177,7 @@ RUN --mount=type=bind,source=images/libman,target=/images/libman \
 #######################################################################
 FROM base as netgen
 ARG NETGEN_REPO_URL="https://github.com/rtimothyedwards/netgen"
-ARG NETGEN_REPO_COMMIT="87d8759a6980d297edcb9be6f8661867e4726f9a"
+ARG NETGEN_REPO_COMMIT="1.5.273"
 ARG NETGEN_NAME="netgen"
 RUN --mount=type=bind,source=images/netgen,target=/images/netgen \
     bash /images/netgen/scripts/install.sh
@@ -217,7 +217,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
 #######################################################################
 FROM base as openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
-ARG OPENROAD_APP_REPO_COMMIT="0889970d1790a2617e69f253221b8bd7626e51dc"
+ARG OPENROAD_APP_REPO_COMMIT="88e1db3ae437374034626b3327d4156e856e2b4b"
 ARG OPENROAD_APP_NAME="openroad"
 RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
     bash /images/openroad/scripts/install.sh
@@ -267,7 +267,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 FROM base as slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="ec1184b6f26614e6939f5809093b9d81429d8c57"
+ARG SLANG_REPO_COMMIT="f56f4b786cf769fe2a1fff4de5cb83d26bff878d"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -277,7 +277,7 @@ RUN --mount=type=bind,source=images/slang,target=/images/slang \
 #######################################################################
 FROM base as verilator
 ARG VERILATOR_REPO_URL="https://github.com/verilator/verilator"
-ARG VERILATOR_REPO_COMMIT="67dfa37c560385827218350ea936eb1baf604240"
+ARG VERILATOR_REPO_COMMIT="v5.024"
 ARG VERILATOR_NAME="verilator"
 RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
     bash /images/verilator/scripts/install.sh
@@ -287,7 +287,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 FROM base as xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="83f62bfdf903a38f6f716edcc445df26927db00c"
+ARG XSCHEM_REPO_COMMIT="43c7e085212d8f0950217cbee3b2419b82666600"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -315,7 +315,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
 #######################################################################
 FROM base as yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
-ARG YOSYS_REPO_COMMIT="4a1b5599258881f579a2d95274754bcd8fc171bd"
+ARG YOSYS_REPO_COMMIT="yosys-0.40"
 ARG YOSYS_NAME="yosys"
 RUN --mount=type=bind,source=images/yosys,target=/images/yosys \
     bash /images/yosys/scripts/install.sh
