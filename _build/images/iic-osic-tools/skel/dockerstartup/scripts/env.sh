@@ -125,9 +125,11 @@ alias ke='klayout -e -nn $PDKPATH/libs.tech/klayout/tech/$PDK.lyt'
 alias xschem='xschem -b --rcfile $PDKPATH/libs.tech/xschem/xschemrc'
 alias xschemtcl='\xschem --rcfile $PDKPATH/libs.tech/xschem/xschemrc'
 
-alias openlane='openlane --manual-pdk'
-alias iic-pdk='source iic-pdk-script.sh'
+#alias openlane='openlane --manual-pdk'
+#FIXME WA for OpenLane2 until ticket is merged into OpenROAD, see https://github.com/efabless/openlane2/issues/440
+alias openlane='openlane --manual-pdk --skip Odb.CheckDesignAntennaProperties --skip Odb.CheckMacroAntennaProperties'
 
+alias iic-pdk='source iic-pdk-script.sh'
 alias tt='cd $TOOLS'
 alias dd='cd $DESIGNS'
 alias pp='cd $PDK_ROOT'
