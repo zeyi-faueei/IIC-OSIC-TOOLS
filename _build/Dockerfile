@@ -65,7 +65,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
 #######################################################################
 FROM osic-multitool as open_pdks
 ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
-ARG OPEN_PDKS_REPO_COMMIT="6d4d11780c40b20ee63cc98e645307a9bf2b2ab8"
+ARG OPEN_PDKS_REPO_COMMIT="bdc9412b3e468c102d01b7cf6337be06ec6e9c9a"
 ARG OPEN_PDKS_NAME="open_pdks"
 RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
     bash /images/open_pdks/scripts/install_volare.sh
