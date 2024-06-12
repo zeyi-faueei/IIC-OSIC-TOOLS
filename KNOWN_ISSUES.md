@@ -10,6 +10,10 @@ Example:
 
 ```DOCKER_EXTRA_PARAMS='--security-opt seccomp=unconfined' ./start_x.sh```
 
+### OpenLane2
+
+The usage of `openlane --smoke-test` currently fails with an error message at a late step since there are compatibility issues between OpenLane2 and OpenROAD. Normal usage of OpenLane2 is not affected.
+
 ### OpenEMS
 
 The visualization tool "AppCSXCAD" will not work in the container with our default settings (`vtkXOpenGLRenderWindow (0x....): Cannot create GLX context.  Aborting.`). The issue has been located to be connected with the environment variable "LIBGL_ALWAYS_INDIRECT". As a workaround, we suggest either unsetting the variable or setting it to 0 (`unset LIBGL_ALWAYS_INDIRECT` or `export LIBGL_ALWAYS_INDIRECT=0`) which is persistent for the running terminal or run AppCSXCAD with the variable set to zero inline: `LIBGL_ALWAYS_INDIRECT=0 AppCSXCAD`.
