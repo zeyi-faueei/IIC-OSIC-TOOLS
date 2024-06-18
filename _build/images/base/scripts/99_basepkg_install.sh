@@ -14,7 +14,7 @@ pip3 install --upgrade --no-cache-dir \
 	gdsfactory==7.10 \
 	gdstk==0.9.40 \
 	gdspy \
-	openlane==2.0.3 \
+	openlane==2.0.9 \
 	openram \
 	pyrtl \
 	pyspice \
