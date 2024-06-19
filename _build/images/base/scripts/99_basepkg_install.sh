@@ -18,6 +18,7 @@ pip3 install --upgrade --no-cache-dir \
 	openram \
 	pyrtl \
 	pyspice \
+	pyuvm \
 	pyverilog \
 	schemdraw \
 	scikit-rf \
