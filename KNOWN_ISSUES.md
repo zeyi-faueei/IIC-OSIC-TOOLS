@@ -26,6 +26,10 @@ The package `hdl21` is temporarily removed, as the build fails.
 
 The package `gdsfactory` is temporarily pinned to 7.10, as the build of `gdstk` on 0.10+ fails on `aarch64` due to an issue with the `pathspec` version.
 
+### matplotlib
+
+The Python package `matplotlib.pyplot` throws a warning about Axes3D. This needs to be resolved in a future release.
+
 ## Build
 
 ### Boost
