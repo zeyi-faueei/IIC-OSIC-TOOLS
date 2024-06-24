@@ -2,8 +2,6 @@
 
 set -e
 
-#FIXME pinning gdsfactory to 7.10, as otherwise build of gdstks fails on aarch64 (such adding gdstk as well)
-
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth \
@@ -11,10 +9,10 @@ pip3 install --upgrade --no-cache-dir \
 	cocotb \
 	edalize \
 	fusesoc \
-	gdsfactory==7.10 \
-	gdstk==0.9.40 \
+	gdsfactory \
 	gdspy \
-	openlane==2.0.9 \
+	hdl21 \
+	openlane \
 	openram \
 	pyrtl \
 	pyspice \
@@ -27,14 +25,11 @@ pip3 install --upgrade --no-cache-dir \
 	vlsirtools \
 	volare
 
-#FIXME: temporary remove hdl21
-
 pip3 install --upgrade --no-cache-dir \
 	jupyter \
 	jupyterlab \
 	jupyter-collaboration \
 	jupyterlab-night
-
 
 echo "[INFO] Install EDA packages via GEM"
 gem install \
