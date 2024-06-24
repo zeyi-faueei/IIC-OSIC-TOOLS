@@ -43,8 +43,8 @@ RUN --mount=type=bind,source=images/magic,target=/images/magic \
 # Compile openvaf
 #######################################################################
 FROM basepkg as openvaf
-ARG OPENVAF_REPO_URL="https://github.com/iic-jku/OpenVAF.git"
-ARG OPENVAF_REPO_COMMIT="a9697ae7780518f021f9f64e819b3a57033bd39f"
+ARG OPENVAF_REPO_URL="https://github.com/arpadbuermen/OpenVAF"
+ARG OPENVAF_REPO_COMMIT="a5898f16d2f23e4cef25d0aa5c4db8c71664fb12"
 ARG OPENVAF_NAME="openvaf"
 ENV OPENVAF_NAME=${OPENVAF_NAME}
 RUN --mount=type=bind,source=images/openvaf,target=/images/openvaf \
@@ -237,7 +237,7 @@ RUN --mount=type=bind,source=images/padring,target=/images/padring \
 #######################################################################
 FROM basepkg as pyopus
 ARG PYOPUS_REPO_URL="https://fides.fe.uni-lj.si/pyopus/download"
-ARG PYOPUS_REPO_COMMIT="0.11"
+ARG PYOPUS_REPO_COMMIT="0.11.1"
 ARG PYOPUS_NAME="pyopus"
 RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
     bash /images/pyopus/scripts/install.sh
@@ -429,6 +429,7 @@ RUN $STARTUPDIR/scripts/install.sh
 #RUN git clone --depth=1 https://github.com/iic-jku/SKY130_SAR-ADC1 ${EXAMPLES}/SKY130_SAR-ADC1 && \
 #    git clone --depth=1 https://github.com/iic-jku/SKY130_PLL1.git ${EXAMPLES}/SKY130_PLL1 && \
 #    git clone --depth=1 https://github.com/mabrains/Analog_blocks.git ${EXAMPLES}/SKY130_ANALOG-BLOCKS
+RUN git clone --depth=1 https://github.com/mole99/ota-5t ${EXAMPLES}/cace/ota-5t
 
 # Finalize setup/install
 RUN $STARTUPDIR/scripts/post_install.sh
