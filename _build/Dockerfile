@@ -107,7 +107,7 @@ RUN --mount=type=bind,source=images/gaw3-xschem,target=/images/gaw3-xschem \
 #######################################################################
 FROM open_pdks as gds3d
 ARG GDS3D_REPO_URL="https://github.com/trilomix/GDS3D.git"
-ARG GDS3D_REPO_COMMIT="e1f81d8cfd0297a047544792712579eca4446c1d"
+ARG GDS3D_REPO_COMMIT="970d11ef4bba553f8b2e3100a93fe3d050f9fdf4"
 ARG GDS3D_NAME="gds3d"
 RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
     bash /images/gds3d/scripts/install.sh
@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base as ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="dc17919eb3d401da6843cb4e298b9005d36d93e9"
+ARG GHDL_REPO_COMMIT="5e2de372e43204fb2f871c2754ae255bc68d65d6"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -127,7 +127,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 FROM base as gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="43d3a80585e3f02ba02a466f1a48b021a8ae53a1"
+ARG GTKWAVE_REPO_COMMIT="e9b5cce38c5c5272d60ff9baf71df027b3607ebd"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -147,7 +147,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 FROM base as iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
-ARG IVERILOG_REPO_COMMIT="713b002138e8a55bbb59f507e68e834e7aef92fe"
+ARG IVERILOG_REPO_COMMIT="dc6f9f20496f218d8b71f2cf31a3d017c3057ec8"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
@@ -217,7 +217,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
 #######################################################################
 FROM base as openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
-ARG OPENROAD_APP_REPO_COMMIT="08c19394f8bc95baa2afdc90de68c7476d60a381"
+ARG OPENROAD_APP_REPO_COMMIT="3105bd7007817ee891a333ccb8d8b5865834a1db"
 ARG OPENROAD_APP_NAME="openroad"
 RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
     bash /images/openroad/scripts/install.sh
@@ -267,7 +267,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 FROM base as slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="f38d6a00d30efa59ed43c90db42144d6fd1b670c"
+ARG SLANG_REPO_COMMIT="d4551730a64a1505cfc4fcc5746e3f132a57f2b4"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -287,7 +287,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 FROM base as xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="fa4d4a0970fe2e46ee5c13bea034655b31196582"
+ARG XSCHEM_REPO_COMMIT="e30d51fb56805348cbd4cf6fce990381915997e2"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -337,7 +337,7 @@ RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-
 
 FROM base as synlig-yosys-plugin
 ARG SYNLIG_YOSYS_PLUGIN_REPO_URL="https://github.com/chipsalliance/synlig.git"
-ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="d844d8d88520e07fa8c6e400ce5a117f7afee700"
+ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="4cc6201902de3652e747ad396cd13ec588aca825"
 ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yosys-plugin \
