@@ -2,7 +2,7 @@
 # Setup base image
 #######################################################################
 ARG BASE_IMAGE=ubuntu:jammy
-FROM ${BASE_IMAGE} as base
+FROM ${BASE_IMAGE} AS base
 ARG CONTAINER_TAG=unknown
 ENV IIC_OSIC_TOOLS_VERSION=${CONTAINER_TAG} \
     DEBIAN_FRONTEND=noninteractive \
@@ -24,14 +24,14 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
 #######################################################################
 # Add base packages (install via pip, npm, or gem)
 #######################################################################
-FROM base as basepkg
+FROM base AS basepkg
 RUN --mount=type=bind,source=images/base,target=/images/base \
     bash /images/base/scripts/99_basepkg_install.sh
 
 #######################################################################
 # Compile magic
 #######################################################################
-FROM basepkg as magic
+FROM basepkg AS magic
 ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
 ARG MAGIC_REPO_COMMIT="8.3.486"
 ARG MAGIC_NAME="magic"
@@ -42,7 +42,7 @@ RUN --mount=type=bind,source=images/magic,target=/images/magic \
 #######################################################################
 # Compile openvaf
 #######################################################################
-FROM basepkg as openvaf
+FROM basepkg AS openvaf
 ARG OPENVAF_REPO_URL="https://github.com/arpadbuermen/OpenVAF"
 ARG OPENVAF_REPO_COMMIT="a5898f16d2f23e4cef25d0aa5c4db8c71664fb12"
 ARG OPENVAF_NAME="openvaf"
@@ -53,7 +53,7 @@ RUN --mount=type=bind,source=images/openvaf,target=/images/openvaf \
 #######################################################################
 # Compile osic-multitool
 #######################################################################
-FROM openvaf as osic-multitool
+FROM openvaf AS osic-multitool
 ARG OSIC_MULTITOOL_REPO_URL="https://github.com/iic-jku/osic-multitool.git"
 ARG OSIC_MULTITOOL_REPO_COMMIT="40edf1e66a5054ca1f332a3b59a1aa51db7839aa"
 ARG OSIC_MULTITOOL_NAME="osic-multitool"
@@ -63,7 +63,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
 #######################################################################
 # Create open_pdks
 #######################################################################
-FROM osic-multitool as open_pdks
+FROM osic-multitool AS open_pdks
 ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
 ARG OPEN_PDKS_REPO_COMMIT="bdc9412b3e468c102d01b7cf6337be06ec6e9c9a"
 ARG OPEN_PDKS_NAME="open_pdks"
@@ -75,7 +75,7 @@ RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
 #######################################################################
 # Compile covered 
 #######################################################################
-FROM base as covered
+FROM base AS covered
 ARG COVERED_REPO_URL="https://github.com/hpretl/verilog-covered"
 ARG COVERED_REPO_COMMIT="19d30fc942642b14dc24e95331cd4777c8dcbad9"
 ARG COVERED_NAME="covered"
@@ -85,7 +85,7 @@ RUN --mount=type=bind,source=images/covered,target=/images/covered \
 #######################################################################
 # Compile cvc_rv
 #######################################################################
-FROM base as cvc_rv
+FROM base AS cvc_rv
 ARG CVC_RV_REPO_URL="https://github.com/d-m-bailey/cvc"
 ARG CVC_RV_REPO_COMMIT="v1.1.5"
 ARG CVC_RV_NAME="cvc_rv"
@@ -95,7 +95,7 @@ RUN --mount=type=bind,source=images/cvc_rv,target=/images/cvc_rv \
 #######################################################################
 # Compile gaw3-xschem
 #######################################################################
-FROM base as gaw3-xschem
+FROM base AS gaw3-xschem
 ARG GAW3_XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem-gaw.git"
 ARG GAW3_XSCHEM_REPO_COMMIT="640c672e1ad768b92eb6a15943459a1d2214e1dc"
 ARG GAW3_XSCHEM_NAME="gaw3-xschem"
@@ -105,7 +105,7 @@ RUN --mount=type=bind,source=images/gaw3-xschem,target=/images/gaw3-xschem \
 #######################################################################
 # Compile GDS3D
 #######################################################################
-FROM open_pdks as gds3d
+FROM open_pdks AS gds3d
 ARG GDS3D_REPO_URL="https://github.com/trilomix/GDS3D.git"
 ARG GDS3D_REPO_COMMIT="970d11ef4bba553f8b2e3100a93fe3d050f9fdf4"
 ARG GDS3D_NAME="gds3d"
@@ -115,7 +115,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 # Compile ghdl
 #######################################################################
-FROM base as ghdl
+FROM base AS ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
 ARG GHDL_REPO_COMMIT="5e2de372e43204fb2f871c2754ae255bc68d65d6"
 ARG GHDL_NAME="ghdl"
@@ -125,7 +125,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 # Compile gtkwave
 #######################################################################
-FROM base as gtkwave
+FROM base AS gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
 ARG GTKWAVE_REPO_COMMIT="e9b5cce38c5c5272d60ff9baf71df027b3607ebd"
 ARG GTKWAVE_NAME="gtkwave"
@@ -135,7 +135,7 @@ RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
 #######################################################################
 # Compile irsim
 #######################################################################
-FROM base as irsim
+FROM base AS irsim
 ARG IRSIM_REPO_URL="https://github.com/rtimothyedwards/irsim"
 ARG IRSIM_REPO_COMMIT="a7884acc04cd94017779893d381b7e93d8895587"
 ARG IRSIM_NAME="irsim"
@@ -145,7 +145,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 # Compile iverilog
 #######################################################################
-FROM base as iverilog
+FROM base AS iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
 ARG IVERILOG_REPO_COMMIT="dc6f9f20496f218d8b71f2cf31a3d017c3057ec8"
 ARG IVERILOG_NAME="iverilog"
@@ -155,7 +155,7 @@ RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
 #######################################################################
 # Compile klayout
 #######################################################################
-FROM basepkg as klayout
+FROM basepkg AS klayout
 ARG KLAYOUT_REPO_URL="https://github.com/KLayout/klayout"
 ARG KLAYOUT_REPO_COMMIT="v0.29.2"
 ARG KLAYOUT_NAME="klayout"
@@ -165,7 +165,7 @@ RUN --mount=type=bind,source=images/klayout,target=/images/klayout \
 #######################################################################
 # Compile libman
 #######################################################################
-FROM base as libman
+FROM base AS libman
 ARG LIBMAN_REPO_URL="https://github.com/IHP-GmbH/LibMan"
 ARG LIBMAN_REPO_COMMIT="a4537c1fba19966e80408a7b224001d5697ff1e6"
 ARG LIBMAN_NAME="libman"
@@ -175,7 +175,7 @@ RUN --mount=type=bind,source=images/libman,target=/images/libman \
 #######################################################################
 # Compile netgen
 #######################################################################
-FROM base as netgen
+FROM base AS netgen
 ARG NETGEN_REPO_URL="https://github.com/rtimothyedwards/netgen"
 ARG NETGEN_REPO_COMMIT="1.5.276"
 ARG NETGEN_NAME="netgen"
@@ -185,7 +185,7 @@ RUN --mount=type=bind,source=images/netgen,target=/images/netgen \
 #######################################################################
 # Compile ngspice
 #######################################################################
-FROM open_pdks as ngspice
+FROM open_pdks AS ngspice
 ARG NGSPICE_REPO_URL="https://github.com/danchitnis/ngspice-sf-mirror"
 ARG NGSPICE_REPO_COMMIT="ngspice-42"
 ARG NGSPICE_NAME="ngspice"
@@ -195,7 +195,7 @@ RUN --mount=type=bind,source=images/ngspice,target=/images/ngspice \
 #######################################################################
 # Compile ngspyce
 #######################################################################
-FROM basepkg as ngspyce
+FROM basepkg AS ngspyce
 ARG NGSPYCE_REPO_URL="https://github.com/ignamv/ngspyce"
 ARG NGSPYCE_REPO_COMMIT="154a2724080e3bf15827549bba9f315cd11984fe"
 ARG NGSPYCE_NAME="ngspyce"
@@ -205,7 +205,7 @@ RUN --mount=type=bind,source=images/ngspyce,target=/images/ngspyce \
 #######################################################################
 # Compile nvc (VHDL simulator)
 #######################################################################
-FROM base as nvc
+FROM base AS nvc
 ARG NVC_REPO_URL="https://github.com/nickg/nvc"
 ARG NVC_REPO_COMMIT="r1.12.2"
 ARG NVC_NAME="nvc"
@@ -215,7 +215,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
 #######################################################################
 # Compile openroad
 #######################################################################
-FROM base as openroad_app
+FROM base AS openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
 ARG OPENROAD_APP_REPO_COMMIT="3105bd7007817ee891a333ccb8d8b5865834a1db"
 ARG OPENROAD_APP_NAME="openroad"
@@ -225,7 +225,7 @@ RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
 #######################################################################
 # Compile padring
 #######################################################################
-FROM base as padring
+FROM base AS padring
 ARG PADRING_REPO_URL="https://github.com/donn/padring"
 ARG PADRING_REPO_COMMIT="b2a64abcc8561d758c0bcb3945117dcb13bd9dca"
 ARG PADRING_NAME="padring"
@@ -235,7 +235,7 @@ RUN --mount=type=bind,source=images/padring,target=/images/padring \
 #######################################################################
 # Compile pyopus
 #######################################################################
-FROM basepkg as pyopus
+FROM basepkg AS pyopus
 ARG PYOPUS_REPO_URL="https://fides.fe.uni-lj.si/pyopus/download"
 ARG PYOPUS_REPO_COMMIT="0.11.1"
 ARG PYOPUS_NAME="pyopus"
@@ -245,7 +245,7 @@ RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
 #######################################################################
 # Compile qflow helper files
 #######################################################################
-FROM base as qflow
+FROM base AS qflow
 ARG QFLOW_REPO_URL="https://github.com/RTimothyEdwards/qflow.git"
 ARG QFLOW_REPO_COMMIT="c270a66de59507ac0e0ace7fd79e91a1b9d1dbb2"
 ARG QFLOW_NAME="qflow"
@@ -255,7 +255,7 @@ RUN --mount=type=bind,source=images/qflow,target=/images/qflow \
 #######################################################################
 # Compile qucs-s
 #######################################################################
-FROM base as qucs-s
+FROM base AS qucs-s
 ARG QUCS_S_REPO_URL="https://github.com/ra3xdh/qucs_s"
 ARG QUCS_S_REPO_COMMIT="24.2.1"
 ARG QUCS_S_NAME="qucs-s"
@@ -265,7 +265,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 # Compile slang
 #######################################################################
-FROM base as slang
+FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
 ARG SLANG_REPO_COMMIT="d4551730a64a1505cfc4fcc5746e3f132a57f2b4"
 ARG SLANG_NAME="slang"
@@ -275,7 +275,7 @@ RUN --mount=type=bind,source=images/slang,target=/images/slang \
 #######################################################################
 # Compile verilator
 #######################################################################
-FROM base as verilator
+FROM base AS verilator
 ARG VERILATOR_REPO_URL="https://github.com/verilator/verilator"
 ARG VERILATOR_REPO_COMMIT="v5.026"
 ARG VERILATOR_NAME="verilator"
@@ -285,7 +285,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 # Compile xschem
 #######################################################################
-FROM base as xschem
+FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
 ARG XSCHEM_REPO_COMMIT="e30d51fb56805348cbd4cf6fce990381915997e2"
 ARG XSCHEM_NAME="xschem"
@@ -296,14 +296,14 @@ RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
 # Compile xyce & xyce-xdm
 #######################################################################
 # FIXME build trilinos as own image, clean with commit etc.
-FROM base as xyce
+FROM base AS xyce
 ARG XYCE_REPO_URL="https://github.com/Xyce/Xyce.git"
 ARG XYCE_REPO_COMMIT="Release-7.8.0"
 ARG XYCE_NAME="xyce"
 RUN --mount=type=bind,source=images/xyce,target=/images/xyce \
     bash /images/xyce/scripts/install.sh
 
-FROM xyce as xyce-xdm
+FROM xyce AS xyce-xdm
 ARG XYCE_XDM_REPO_URL="https://github.com/Xyce/XDM"
 ARG XYCE_XDM_REPO_COMMIT="Release-2.7.0"
 ARG XYCE_XDM_NAME="xyce-xdm"
@@ -313,7 +313,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
 #######################################################################
 # Compile yosys & ghdl plugin & synlig plugin
 #######################################################################
-FROM base as yosys
+FROM base AS yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
 ARG YOSYS_REPO_COMMIT="yosys-0.42"
 ARG YOSYS_NAME="yosys"
@@ -326,7 +326,7 @@ ARG YOSYS_MCY_NAME="yosys_mcy"
 RUN --mount=type=bind,source=images/yosys,target=/images/yosys \
     bash /images/yosys/scripts/install.sh
 
-FROM base as ghdl-yosys-plugin
+FROM base AS ghdl-yosys-plugin
 ARG GHDL_YOSYS_PLUGIN_REPO_URL="https://github.com/ghdl/ghdl-yosys-plugin.git"
 ARG GHDL_YOSYS_PLUGIN_REPO_COMMIT="0c4740a4f8f1e615cc587b3cd3849fa23a623862"
 ARG GHDL_YOSYS_PLUGIN_NAME="ghdl-yosys-plugin"
@@ -335,7 +335,7 @@ COPY --from=ghdl	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-plugin \
     bash /images/ghdl-yosys-plugin/scripts/install.sh
 
-FROM base as synlig-yosys-plugin
+FROM base AS synlig-yosys-plugin
 ARG SYNLIG_YOSYS_PLUGIN_REPO_URL="https://github.com/chipsalliance/synlig.git"
 ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="4cc6201902de3652e747ad396cd13ec588aca825"
 ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
@@ -346,7 +346,7 @@ RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yo
 #######################################################################
 # Compile different components for the rftoolkit
 #######################################################################
-FROM base as rftoolkit
+FROM base AS rftoolkit
 ARG RFTK_NAME="rftoolkit"
 ARG RFTK_FASTHENRY_REPO_URL="https://github.com/ediloren/FastHenry2"
 ARG RFTK_FASTHENRY_REPO_COMMIT="363e43ed57ad3b9affa11cba5a86624fad0edaa9"
@@ -358,7 +358,7 @@ RUN --mount=type=bind,source=images/rftoolkit,target=/images/rftoolkit \
 #######################################################################
 # Final output container
 #######################################################################
-FROM basepkg as iic-osic-tools
+FROM basepkg AS iic-osic-tools
 
 # Connection ports for controlling the UI:
 # VNC port:5901
