@@ -189,8 +189,6 @@ apt -y install \
 	python3-linecache2 \
 	python3-loguru \
 	python3-lxml \
-	python3-matplotlib \
-	python3-matplotlib-inline \
 	python3-mistune \
 	python3-mpi4py \
 	python3-nbclient \

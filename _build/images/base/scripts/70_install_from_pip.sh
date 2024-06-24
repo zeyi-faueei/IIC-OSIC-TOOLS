@@ -12,6 +12,8 @@ pip3 install --upgrade --no-cache-dir \
 	gobject \
 	ipympl \
 	libparse \
+	matplotlib \
+	matplotlib-inline \
 	maturin \
 	meson \
 	ninja \
