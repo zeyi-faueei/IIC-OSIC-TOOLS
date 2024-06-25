@@ -29,6 +29,8 @@ This environment is based on the [efabless.com FOSS-ASIC-TOOLS](https://github.c
 
 ## 1. How to Use These Open-Source (and Free) IC Design Tools
 
+**For great step-to-step instructions of installation and operation of our tool collection, please checkout Kwantae Kim's [Setting Up Open Source Tools with Docker](https://kwantaekim.github.io/2024/05/25/OSE-Docker/)!**
+
 It supports two *modes of operation*:
 
 1. Using a complete desktop environment (XFCE) in `Xvnc` (a VNC server), either directly accessing it with a VNC client of your choice or the integrated [noVNC](https://novnc.com) server that runs in your browser.
