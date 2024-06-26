@@ -18,7 +18,6 @@ pip3 install --upgrade --no-cache-dir \
 	openram==1.2.48 \
 	pyrtl==0.11.1 \
 	pyspice==1.5 \
-	pyuvm==2.91 \
 	pyuvm==2.9.1 \
 	pyverilog==1.3.0 \
 	schemdraw==0.19 \
