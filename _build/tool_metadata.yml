@@ -51,7 +51,7 @@
   commit: bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
 - name: openroad_app
   repo: https://github.com/The-OpenROAD-Project/OpenROAD
-  commit: 3105bd7007817ee891a333ccb8d8b5865834a1db
+  commit: d423155d69de7f683a23f6916ead418a615ad4ad
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
   commit: 40edf1e66a5054ca1f332a3b59a1aa51db7839aa

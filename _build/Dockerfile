@@ -217,7 +217,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
 #######################################################################
 FROM base AS openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
-ARG OPENROAD_APP_REPO_COMMIT="3105bd7007817ee891a333ccb8d8b5865834a1db"
+ARG OPENROAD_APP_REPO_COMMIT="d423155d69de7f683a23f6916ead418a615ad4ad"
 ARG OPENROAD_APP_NAME="openroad"
 RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
     bash /images/openroad/scripts/install.sh
