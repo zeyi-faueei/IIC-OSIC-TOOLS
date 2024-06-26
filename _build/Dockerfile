@@ -237,7 +237,7 @@ RUN --mount=type=bind,source=images/padring,target=/images/padring \
 #######################################################################
 FROM basepkg AS pyopus
 ARG PYOPUS_REPO_URL="https://fides.fe.uni-lj.si/pyopus/download"
-ARG PYOPUS_REPO_COMMIT="0.11.1"
+ARG PYOPUS_REPO_COMMIT="0.11"
 ARG PYOPUS_NAME="pyopus"
 RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
     bash /images/pyopus/scripts/install.sh
