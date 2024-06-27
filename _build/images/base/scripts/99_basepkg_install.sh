@@ -13,6 +13,7 @@ pip3 install --upgrade --no-cache-dir \
 	edalize==0.5.4 \
 	fusesoc==2.3 \
 	gdsfactory==8.3.0 \
+	gdsfactory==8.3.1 \
 	gdspy==1.6.13 \
 	hdl21==6.0.0 \
 	openram==1.2.48 \
