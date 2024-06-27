@@ -2,6 +2,13 @@
 
 set -e
 
+echo "[INFO] Install Jupyter packages via PIP"
+pip3 install --upgrade --no-cache-dir \
+	jupyter \
+	jupyterlab \
+	jupyter-collaboration \
+	jupyterlab-night
+
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth==0.5.0 \
@@ -32,11 +39,6 @@ cd openlane2
 pip3 install .
 cd /
 
-pip3 install --upgrade --no-cache-dir \
-	jupyter \
-	jupyterlab \
-	jupyter-collaboration \
-	jupyterlab-night
 
 echo "[INFO] Install EDA packages via GEM"
 gem install \
