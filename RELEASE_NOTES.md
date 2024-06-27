@@ -7,7 +7,7 @@ This document summarizes the most important changes of the individual releases o
 * Bump various tool versions.
 * Include an example for `cace`.
 * Add `pyuvm`.
-* Remove `gdstk`.
+* Remove `gdstk` due to build issues.
 
 ## 2024.05
 
