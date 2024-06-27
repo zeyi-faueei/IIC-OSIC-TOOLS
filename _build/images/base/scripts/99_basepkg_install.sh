@@ -24,6 +24,7 @@ pip3 install --upgrade --no-cache-dir \
 	schemdraw==0.19 \
 	scikit-rf==1.1.0 \
 	siliconcompiler==0.23.2 \
+	siliconcompiler==0.23.3 \
 	spyci==1.0.2 \
 	vlsirtools==6.0.0 \
 	volare==0.18.0
