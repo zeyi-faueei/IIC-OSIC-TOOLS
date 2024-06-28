@@ -19,6 +19,7 @@ pip3 install --upgrade --no-cache-dir \
 	ninja \
 	panda \
 	pathspec \
+	pipdeptree \
 	prettyprinttree \
 	prettytable \
 	pyyaml \
