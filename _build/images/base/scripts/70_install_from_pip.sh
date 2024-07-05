@@ -24,6 +24,7 @@ pip3 install --upgrade --no-cache-dir \
 	prettytable \
 	pyyaml \
 	scikit-build \
+	scikit-image \
 	simanneal \
 	svgutils \
 	torch_geometric
