@@ -2,7 +2,7 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
-## 2024.06
+## 2024.07
 
 * Bump various tool versions.
 * Include an example for `cace`.
