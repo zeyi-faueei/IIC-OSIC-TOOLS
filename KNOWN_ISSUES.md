@@ -22,6 +22,10 @@ The visualization tool "AppCSXCAD" will not work in the container with our defau
 
 The Python package `matplotlib.pyplot` throws a warning about Axes3D. This needs to be resolved in a future release.
 
+### gdsfactory
+
+There is a python inconsistency between `gdsfactory` and `openlane`. Currently, `openlane` is priorized. If `gdsfactory` is needed do a `pip3 install --upgrade gdsfactory`.
+
 ## Build
 
 ### Boost
