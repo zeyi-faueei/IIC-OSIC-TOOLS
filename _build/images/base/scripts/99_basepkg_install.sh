@@ -40,7 +40,7 @@ pip3 install --upgrade --no-cache-dir \
 	volare==0.18.1
 
 #FIXME OpenLane2 goes last to get its dependencies right
-pip3 install --upgrade --no-chache-dir \
+pip3 install --upgrade --no-cache-dir \
 	openlane==2.0.11
 
 echo "[INFO] Install EDA packages via GEM"
