@@ -20,11 +20,11 @@ pip3 install --upgrade --no-cache-dir \
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth==0.5.0 \
-	cace==2.3.9 \
+	cace==2.3.11 \
 	cocotb==1.8.1 \
 	edalize==0.5.4 \
 	fusesoc==2.3 \
-	gdsfactory==8.4.0 \
+	gdsfactory==8.5.1 \
 	gdspy==1.6.13 \
 	hdl21==6.0.0 \
 	openram==1.2.48 \
@@ -34,7 +34,7 @@ pip3 install --upgrade --no-cache-dir \
 	pyverilog==1.3.0 \
 	schemdraw==0.19 \
 	scikit-rf==1.1.0 \
-	siliconcompiler==0.23.4 \
+	siliconcompiler==0.24.0 \
 	spyci==1.0.2 \
 	vlsirtools==6.0.0 \
 	volare==0.18.1
