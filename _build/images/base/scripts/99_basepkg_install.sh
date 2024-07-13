@@ -9,14 +9,6 @@ pip3 install --upgrade --no-cache-dir \
 	jupyter-collaboration \
 	jupyterlab-night
 
-#FIXME Locally build OpenLane2 due to klayout incompatibility
-#FIXME Need to add OL2 first, otherwise dependency issue on antlr4-python3-runtime
-#cd /tmp
-#git clone --depth=1 https://github.com/iic-jku/openlane2.git
-#cd openlane2
-#pip3 install .
-#cd /
-
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth==0.5.0 \
@@ -40,8 +32,16 @@ pip3 install --upgrade --no-cache-dir \
 	volare==0.18.1
 
 #FIXME OpenLane2 goes last to get its dependencies right
-pip3 install --upgrade --no-cache-dir \
-	openlane==2.0.11
+#pip3 install --upgrade --no-cache-dir \
+#	openlane==2.0.11
+#FIXME Locally build OpenLane2 due to klayout incompatibility
+#FIXME Need to add OL2 first, otherwise dependency issue on antlr4-python3-runtime
+cd /tmp
+git clone --depth=1 https://github.com/iic-jku/openlane2.git
+cd openlane2
+pip3 install .
+cd /
+
 
 echo "[INFO] Install EDA packages via GEM"
 gem install \
