@@ -11,7 +11,7 @@ set -e
 ./autogen.sh
 
 # Define common compile options
-NGSPICE_COMPILE_OPTS=("--disable-debug" "--enable-openmp" "--with-x" "--with-readline=yes" "--enable-pss" "--enable-xspice" "--with-fftw3=yes" "--enable-osdi" "--enable-klu")
+NGSPICE_COMPILE_OPTS=("--with-x" "--enable-pss" "--with-fftw3=yes" )
 
 # Compile ngspice executable
 ./configure "${NGSPICE_COMPILE_OPTS[@]}" --prefix="${TOOLS}/${NGSPICE_NAME}/${REPO_COMMIT_SHORT}"
@@ -41,7 +41,7 @@ if [ -f "$PDK_ROOT"/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi ]; then
     sed -i "/vbic_4T_et_cf.osdi/s/^/#/" "$FNAME"
 
     # Copy OSDI PSP model for IHP
-    cp "$PDK_ROOT"/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi "${TOOLS}"/"${NGSPICE_NAME}"/"${REPO_COMMIT_SHORT}"/lib/ngspice/psp103.osdi
+    cp "$PDK_ROOT"/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi "${TOOLS}"/"${NGSPICE_NAME}"/"${REPO_COMMIT_SHORT}"/lib/ngspice/psp103_nqs.osdi
 fi
 
 # Find OpenVAF version
