@@ -233,6 +233,14 @@ RUN --mount=type=bind,source=images/padring,target=/images/padring \
     bash /images/padring/scripts/install.sh
 
 #######################################################################
+# Compile pulp platform tools
+#######################################################################
+FROM base AS pulp-tools
+ARG PULP_NAME="pulp"
+RUN --mount=type=bind,source=images/pulp-tools,target=/images/pulp-tools \
+    bash /images/pulp-tools/scripts/install.sh
+
+#######################################################################
 # Compile pyopus
 #######################################################################
 FROM basepkg AS pyopus
@@ -402,6 +410,7 @@ COPY --from=openroad_app                 ${TOOLS}/              ${TOOLS}/
 COPY --from=osic-multitool               ${TOOLS}/              ${TOOLS}/
 COPY --from=openvaf                      ${TOOLS}/              ${TOOLS}/
 COPY --from=padring                      ${TOOLS}/              ${TOOLS}/
+COPY --from=pulp-tools                   ${TOOLS}/              ${TOOLS}/
 COPY --from=pyopus                       ${TOOLS}/              ${TOOLS}/
 COPY --from=qflow                        ${TOOLS}/              ${TOOLS}/
 COPY --from=qucs-s                       ${TOOLS}/              ${TOOLS}/
