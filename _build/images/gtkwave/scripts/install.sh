@@ -2,8 +2,6 @@
 
 set -e
 
-REPO_COMMIT_SHORT=$(echo "$GTKWAVE_REPO_COMMIT" | cut -c 1-7)
-
 git clone --filter=blob:none "${GTKWAVE_REPO_URL}" "${GTKWAVE_NAME}"
 cd "${GTKWAVE_NAME}"
 git checkout "${GTKWAVE_REPO_COMMIT}"
@@ -27,6 +25,6 @@ index c99f728..931d461 100644
      '-Werror=parenthesis',
 EOF
 
-meson setup build --prefix="${TOOLS}/${GTKWAVE_NAME}/${REPO_COMMIT_SHORT}"
+meson setup build --prefix="${TOOLS}/${GTKWAVE_NAME}"
 meson compile -C build
 meson install -C build

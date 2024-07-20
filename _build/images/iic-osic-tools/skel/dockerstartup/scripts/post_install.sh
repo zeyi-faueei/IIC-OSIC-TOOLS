@@ -19,10 +19,10 @@ cp -a "$TOOLS/sak/openlane/spef_extractor" "$TOOLS/"
 # Link all tool binaries into one bin folder
 mkdir -p "$TOOLS/bin"
 cd    "$TOOLS/bin" || exit
-ln -s ../*/*/bin/* .
+ln -s ../*/bin/* .
 
 ###############
-ln -s "$TOOLS"/xschem/*/* "$TOOLS"/xschem/
+ln -s "$TOOLS"/xschem/* "$TOOLS"/xschem/
 
 ###############
 mkdir "$STARTUPDIR"/logs

@@ -2,8 +2,6 @@
 
 set -e
 
-REPO_COMMIT_SHORT=$(echo "$LIBMAN_REPO_COMMIT" | cut -c 1-7)
-
 git clone --filter=blob:none "${LIBMAN_REPO_URL}" "${LIBMAN_NAME}"
 cd "${LIBMAN_NAME}"
 git checkout "${LIBMAN_REPO_COMMIT}"
