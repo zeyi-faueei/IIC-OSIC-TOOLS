@@ -28,6 +28,21 @@ cd "$TOOLS/bin" || exit
 ln -s ../*/bin/* .
 # Add link for xyce, as binary is named Xyce
 ln -s Xyce xyce
+
+# Install wrapper for Yosys so that modules are loaded automatically
+# See https://github.com/iic-jku/IIC-OSIC-TOOLS/issues/43
+# ------------------------------------------------------------------
+cd "$TOOLS/bin" || exit
+rm -f yosys
+# shellcheck disable=SC2016
+echo '#!/bin/bash
+if [[ $1 == "-h" ]]; then
+    exec -a "$0" "$TOOLS/yosys/bin/yosys" "$@"
+else
+    exec -a "$0" "$TOOLS/yosys/bin/yosys" -m ghdl -m systemverilog "$@"
+fi' > yosys
+chmod +x yosys
+
 # FIXME Not sure what this does whether it is even needed
 # -------------------------------------------------------
 ln -s "$TOOLS"/xschem/* "$TOOLS"/xschem/
