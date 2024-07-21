@@ -29,7 +29,7 @@ echo "[INFO] Building SVase"
 git clone --depth=1 https://github.com/pulp-platform/svase.git
 cd svase || exit
 cd deps || exit
-make -j"$(nproc)"
+make # -j"$(nproc)"
 cd ..
 mkdir build && cd build
 cmake ..
