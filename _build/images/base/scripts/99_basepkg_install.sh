@@ -24,7 +24,7 @@ pip3 install --upgrade --no-cache-dir \
 	pyspice==1.5 \
 	pyuvm==3.0.0 \
 	pyverilog==1.3.0 \
-	schemdraw==0.19 \
+	schemdraw[svgmath]==0.19 \
 	scikit-rf==1.1.0 \
 	siliconcompiler==0.24.0 \
 	spyci==1.0.2 \
