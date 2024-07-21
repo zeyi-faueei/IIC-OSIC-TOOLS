@@ -26,6 +26,8 @@ cp -a "$TOOLS/sak/openlane/spef_extractor" "$TOOLS/"
 mkdir -p "$TOOLS/bin"
 cd "$TOOLS/bin" || exit
 ln -s ../*/bin/* .
+# Add link for xyce, as binary is named Xyce
+ln -s Xyce xyce
 # FIXME Not sure what this does whether it is even needed
 # -------------------------------------------------------
 ln -s "$TOOLS"/xschem/* "$TOOLS"/xschem/
