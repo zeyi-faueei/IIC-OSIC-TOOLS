@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e
+set -e
 
 mkdir -p "${TOOLS}/${PULP_NAME}/bin"
 cd /tmp || exit
@@ -25,9 +25,14 @@ cd ..
 # -----------
 git clone --depth=1 https://github.com/pulp-platform/svase.git
 cd svase || exit
-make build -j"$(nproc)"
-cp build/svase "${TOOLS}/${PULP_NAME}/bin"
+cd deps || exit
+make -j"$(nproc)"
 cd ..
+mkdir build && cd build
+cmake ..
+make -j"$(nproc)"
+cp svase "${TOOLS}/${PULP_NAME}/bin"
+cd .. && cd ..
 
 # Install Verible
 # ---------------
