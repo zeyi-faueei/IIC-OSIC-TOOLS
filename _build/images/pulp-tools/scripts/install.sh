@@ -7,6 +7,7 @@ cd /tmp || exit
 
 # Build Bender
 # ------------
+echo "[INFO] Building Bender"
 git clone --depth=1 https://github.com/pulp-platform/bender.git
 cd bender || exit
 cargo build --release -j"$(nproc)"
@@ -15,6 +16,7 @@ cd ..
 
 # Build Morty
 # -----------
+echo "[INFO] Building Morty"
 git clone --depth=1 https://github.com/pulp-platform/morty.git 
 cd morty || exit
 cargo build --release -j"$(nproc)"
@@ -23,6 +25,7 @@ cd ..
 
 # Build SVase
 # -----------
+echo "[INFO] Building SVase"
 git clone --depth=1 https://github.com/pulp-platform/svase.git
 cd svase || exit
 cd deps || exit
@@ -37,6 +40,7 @@ cd .. && cd ..
 # Install Verible
 # ---------------
 # We don't build locally (too many strange dependencies), but get binary
+echo "[INFO] Installing Verible"
 if [ "$(arch)" == "aarch64" ]; then
     CPUID="arm64"
 else
@@ -49,6 +53,7 @@ cp verible*/bin/* "${TOOLS}/${PULP_NAME}/bin"
 
 # Build SV2V
 # ----------
+echo "[INFO] Building SV2V"
 # Get Haskell stack first
 wget -qO- https://get.haskellstack.org/ | sh
 # Now build SV2V using Haskell and Stack
