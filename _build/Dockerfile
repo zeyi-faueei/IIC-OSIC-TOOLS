@@ -273,7 +273,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 # Compile riscv-gnu-toolchain-rv32i
 #######################################################################
-FROM base as riscv-gnu-toolchain-rv32i
+FROM base AS riscv-gnu-toolchain-rv32i
 ARG RISCV_GNU_TOOLCHAIN_RV32I_REPO_URL="https://github.com/riscv-collab/riscv-gnu-toolchain.git"
 ARG RISCV_GNU_TOOLCHAIN_RV32I_REPO_COMMIT="2024.04.12"
 ARG RISCV_GNU_TOOLCHAIN_RV32I_NAME="riscv-gnu-toolchain-rv32i"
