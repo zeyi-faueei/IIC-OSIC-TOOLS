@@ -276,7 +276,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 FROM base AS riscv-gnu-toolchain
 ARG RISCV_GNU_TOOLCHAIN_REPO_URL="https://github.com/riscv-collab/riscv-gnu-toolchain.git"
 ARG RISCV_GNU_TOOLCHAIN_REPO_COMMIT="2024.04.12"
-ARG RISCV_GNU_TOOLCHAIN_NAME="riscv-gnu-toolchain-rv32i"
+ARG RISCV_GNU_TOOLCHAIN_NAME="riscv-gnu-toolchain"
 COPY images/riscv-gnu-toolchain/scripts/install.sh install.sh
 RUN bash install.sh
 
