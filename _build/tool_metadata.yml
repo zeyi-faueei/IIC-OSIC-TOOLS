@@ -61,6 +61,9 @@
 - name: pyopus
   repo: https://fides.fe.uni-lj.si/pyopus/download
   commit: "0.11"
+- name: riscv-gnu-toolchain-rv32i
+  repo: https://github.com/riscv-collab/riscv-gnu-toolchain.git
+  commit: "2024.04.12"
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
   commit: 1b3255e68318a1a0ae6b9281c5c19f5e5b6cbc63
