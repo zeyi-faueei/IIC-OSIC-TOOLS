@@ -127,8 +127,6 @@ apt -y install \
 	llvm-15-dev \
 	make \
 	ninja-build \
-	nodejs \
-	npm \
 	openmpi-bin \
 	openssl \
 	patch \

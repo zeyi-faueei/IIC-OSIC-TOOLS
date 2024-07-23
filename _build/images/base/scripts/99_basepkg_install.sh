@@ -49,6 +49,3 @@ gem install \
 	rggen-verilog \
 	rggen-vhdl
 
-echo "[INFO] Install EDA packages via NPM"
-npm install -g \
-	netlistsvg
