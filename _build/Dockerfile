@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base AS ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="abe642a3c770ae2d3983cba5604b35c24fdcc6be"
+ARG GHDL_REPO_COMMIT="5b5a300dacbac9658fefb4d2cada8ba1e67c331e"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -147,7 +147,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 FROM base AS iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
-ARG IVERILOG_REPO_COMMIT="cb6544fac3404cea6a5c204ac1cef93bfebcf919"
+ARG IVERILOG_REPO_COMMIT="676b36e4554f119d0606ade79db2fba6834d3445"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
@@ -207,7 +207,7 @@ RUN --mount=type=bind,source=images/ngspyce,target=/images/ngspyce \
 #######################################################################
 FROM base AS nvc
 ARG NVC_REPO_URL="https://github.com/nickg/nvc"
-ARG NVC_REPO_COMMIT="r1.12.2"
+ARG NVC_REPO_COMMIT="r1.13.0"
 ARG NVC_NAME="nvc"
 RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
     bash /images/nvc/scripts/install.sh
@@ -275,7 +275,7 @@ RUN --mount=type=bind,source=images/qflow,target=/images/qflow \
 #######################################################################
 FROM base AS qucs-s
 ARG QUCS_S_REPO_URL="https://github.com/ra3xdh/qucs_s"
-ARG QUCS_S_REPO_COMMIT="24.2.1"
+ARG QUCS_S_REPO_COMMIT="24.3.0"
 ARG QUCS_S_NAME="qucs-s"
 RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
     bash /images/qucs-s/scripts/install.sh
@@ -295,7 +295,7 @@ RUN bash install.sh
 #######################################################################
 FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="1b3255e68318a1a0ae6b9281c5c19f5e5b6cbc63"
+ARG SLANG_REPO_COMMIT="928045a4da4e1239831b2d0cbd75f25b63ee07d5"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -315,7 +315,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="28bef9b06e657c69ec9f5e52fe9665d4d4c133ba"
+ARG XSCHEM_REPO_COMMIT="8b5ed3f32ed77b67044b7097376e845be518cdc2"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -365,7 +365,7 @@ RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-
 
 FROM base AS synlig-yosys-plugin
 ARG SYNLIG_YOSYS_PLUGIN_REPO_URL="https://github.com/chipsalliance/synlig.git"
-ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="320e2fdec5d37bf7acf2c1a5b6578997dd536f5f"
+ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="3e3cdc33140edfd25cca5229555dcd6dc9d14468"
 ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yosys-plugin \
