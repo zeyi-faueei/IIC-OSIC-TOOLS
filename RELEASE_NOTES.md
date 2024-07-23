@@ -9,6 +9,7 @@ This document summarizes the most important changes of the individual releases o
 * Bump various tools versions.
 * Fixed VHDL usage in OpenLane.
 * Simplified tools paths by removing tool version.
+* Remove `netlistsvg`, as it is requiring the large node.js package.
 
 ## 2024.07
 
