@@ -28,6 +28,7 @@ cd ..
 echo "[INFO] Building SVase"
 git clone --depth=1 https://github.com/pulp-platform/svase.git
 cd svase || exit
+scripts/gen_version.sh > include/version.h
 cd deps || exit
 make # -j"$(nproc)"
 cd ..
