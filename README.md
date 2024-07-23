@@ -99,7 +99,6 @@ Below is a list of the current tools already installed and ready to use (note th
 * [klayout](https://github.com/KLayout/klayout) layout viewer and editor for GDS and OASIS
 * [libman](https://github.com/IHP-GmbH/LibMan) design library manager to manage cells and views
 * [magic](https://github.com/rtimothyedwards/magic) layout editor with DRC and PEX
-* [netlistsvg](https://github.com/nturley/netlistsvg) draws an SVG netlist from a `yosys` JSON netlist
 * [netgen](https://github.com/rtimothyedwards/netgen) netlist comparison (LVS)
 * [ngspice](http://ngspice.sourceforge.net) SPICE analog and mixed-signal simulator, with OSDI support
 * [ngspyce](https://github.com/ignamv/ngspyce) Python bindings for `ngspice`
