@@ -251,6 +251,16 @@ RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
     bash /images/pyopus/scripts/install.sh
 
 #######################################################################
+# Compile surelog
+#######################################################################
+FROM base AS surelog
+ARG SURELOG_REPO_URL="https://github.com/chipsalliance/Surelog"
+ARG SURELOG_REPO_COMMIT="v1.83"
+ARG SURELOG_NAME="surelog"
+RUN --mount=type=bind,source=images/surelog,target=/images/surelog \
+    bash /images/surelog/scripts/install.sh
+
+#######################################################################
 # Compile qflow helper files
 #######################################################################
 FROM base AS qflow
@@ -427,6 +437,7 @@ COPY --from=qucs-s                       ${TOOLS}/              ${TOOLS}/
 COPY --from=rftoolkit                    ${TOOLS}/              ${TOOLS}/
 COPY --from=riscv-gnu-toolchain          ${TOOLS}/              ${TOOLS}/
 COPY --from=slang                        ${TOOLS}/              ${TOOLS}/
+COPY --from=surelog                      ${TOOLS}/              ${TOOLS}/
 COPY --from=verilator                    ${TOOLS}/              ${TOOLS}/
 COPY --from=xschem                       ${TOOLS}/              ${TOOLS}/
 COPY --from=xyce                         ${TOOLS}/              ${TOOLS}/

@@ -67,6 +67,9 @@
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
   commit: 1b3255e68318a1a0ae6b9281c5c19f5e5b6cbc63
+- name: surelog
+  repot: https://github.com/chipsalliance/Surelog
+  commit: "v1.83"
 - name: synlig-yosys-plugin
   repo: https://github.com/chipsalliance/synlig.git
   commit: 320e2fdec5d37bf7acf2c1a5b6578997dd536f5f
