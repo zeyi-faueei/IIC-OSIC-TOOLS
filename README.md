@@ -110,6 +110,7 @@ Below is a list of the current tools already installed and ready to use (note th
 * [osic-multitool](https://github.com/iic-jku/osic-multitool.git) collection of useful scripts and documentation
 * [padring](https://github.com/donn/padring) padring generation tool
 * [pulp-tools](https://github.com/pulp-platform/pulp) PULP platform tools consisting of [bender](https://github.com/pulp-platform/bender), [morty](https://github.com/pulp-platform/morty), [svase](https://github.com/pulp-platform/svase), [verible](https://github.com/chipsalliance/verible), and [sv2v](https://github.com/zachjs/sv2v)
+* [pygmid](https://github.com/dreoilin/pygmid) Python version of the gm/Id starter kit from Boris Murmann 
 * [pyopus](https://fides.fe.uni-lj.si/pyopus/index.html) simulation runner and optimization tool for analog circuits
 * [pyrtl](https://github.com/UCSBarchlab/PyRTL) collection of classes for pythonic RTL design
 * [pyspice](https://github.com/PySpice-org/PySpice) interface `ngspice` and `xyce` from Python

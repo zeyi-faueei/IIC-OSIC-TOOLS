@@ -20,6 +20,7 @@ pip3 install --upgrade --no-cache-dir \
 	gdspy==1.6.13 \
 	hdl21==6.0.0 \
 	openram==1.2.48 \
+	pygmid==1.2.11 \
 	pyrtl==0.11.2 \
 	pyspice==1.5 \
 	pyuvm==3.0.0 \
