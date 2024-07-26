@@ -1,9 +1,9 @@
 #!/bin/bash
-
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${GHDL_REPO_URL}" "${GHDL_NAME}"
-cd "${GHDL_NAME}"
+cd "${GHDL_NAME}" || exit 1
 git checkout "${GHDL_REPO_COMMIT}"
 
 # LLVM compile (needs LLVM<15)

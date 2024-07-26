@@ -1,11 +1,10 @@
 #!/bin/bash
-
 set -e
 
 # PyOPUS requires these packages be installed via APT: python3-cvxopt and python3-pyqt5
 # (otherwise build fails on aarch64)
 mkdir -p "$TOOLS"
-cd /tmp
+cd /tmp || exit 1 
 wget --no-verbose "$PYOPUS_REPO_URL/$PYOPUS_REPO_COMMIT/PyOPUS-$PYOPUS_REPO_COMMIT.tar.gz"
 tar xfz "PyOPUS-$PYOPUS_REPO_COMMIT.tar.gz"
 cd "PyOPUS-$PYOPUS_REPO_COMMIT" || exit 1
@@ -16,7 +15,7 @@ ln -s "$TOOLS/$PYOPUS_NAME/local/bin" "$TOOLS/$PYOPUS_NAME/bin"
 cd /tmp && rm -rf "PyOPUS-$PYOPUS_REPO_COMMIT" 
 
 # Install examples and docs
-cd /tmp
+cd /tmp || exit 1
 wget --no-verbose "$PYOPUS_REPO_URL/$PYOPUS_REPO_COMMIT/PyOPUS-$PYOPUS_REPO_COMMIT-doc-demo.tar.gz"
 tar xfz "PyOPUS-$PYOPUS_REPO_COMMIT-doc-demo.tar.gz"
 cd "PyOPUS-$PYOPUS_REPO_COMMIT" || exit 1

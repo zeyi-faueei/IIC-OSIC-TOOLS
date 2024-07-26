@@ -1,9 +1,9 @@
 #!/bin/bash
-
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${GDS3D_REPO_URL}" "${GDS3D_NAME}"
-cd "${GDS3D_NAME}"
+cd "${GDS3D_NAME}" || exit 1
 git checkout "${GDS3D_REPO_COMMIT}"
 #fix for GCC-11, see https://github.com/trilomix/GDS3D/pull/9
 sed -i -e '/CFLAGS=/ s/$/ -std=c++11/' linux/Makefile

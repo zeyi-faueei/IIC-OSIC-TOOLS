@@ -1,9 +1,10 @@
 #!/bin/bash
 
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${OPENVAF_REPO_URL}" "${OPENVAF_NAME}"
-cd "${OPENVAF_NAME}"
+cd "${OPENVAF_NAME}" || exit 1
 git checkout "${OPENVAF_REPO_COMMIT}"
 
 # LLVM compile (needs LLVM 15 or 16)

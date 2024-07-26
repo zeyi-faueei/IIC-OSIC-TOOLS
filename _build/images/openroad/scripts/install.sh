@@ -1,9 +1,9 @@
 #!/bin/bash
-
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${OPENROAD_APP_REPO_URL}" "${OPENROAD_APP_NAME}"
-cd "${OPENROAD_APP_NAME}"
+cd "${OPENROAD_APP_NAME}" || exit 1
 git checkout "${OPENROAD_APP_REPO_COMMIT}"
 git submodule update --init --recursive
 

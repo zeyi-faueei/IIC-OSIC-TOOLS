@@ -1,9 +1,9 @@
 #!/bin/bash
-
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${XYCE_XDM_REPO_URL}" "${XYCE_XDM_NAME}"
-cd "${XYCE_XDM_NAME}"
+cd "${XYCE_XDM_NAME}" || exit 1
 git checkout "${XYCE_XDM_REPO_COMMIT}"
 
 #FIXME path build errors

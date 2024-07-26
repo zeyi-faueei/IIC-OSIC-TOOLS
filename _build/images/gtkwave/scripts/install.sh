@@ -1,11 +1,10 @@
 #!/bin/bash
-
 set -e
+cd /tmp || exit 1
 
 git clone --filter=blob:none "${GTKWAVE_REPO_URL}" "${GTKWAVE_NAME}"
-cd "${GTKWAVE_NAME}"
+cd "${GTKWAVE_NAME}" || exit 1
 git checkout "${GTKWAVE_REPO_COMMIT}"
-
 
 # FIXME Remove the parameter that declares a missing include directory as an error 
 # because the build fails otherwise (hopefully PR will be merged at some time).
