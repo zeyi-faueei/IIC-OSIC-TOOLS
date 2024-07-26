@@ -2,7 +2,7 @@
 
 ../configure \
 	CXXFLAGS="-O3" \
-	ARCHDIR="/$XYCE_NAME/xycelibs/parallel" \
+	ARCHDIR="/tmp/$XYCE_NAME/xycelibs/parallel" \
 	CPPFLAGS="-I/usr/include/suitesparse" \
 	--enable-mpi \
 	CXX=mpicxx \
