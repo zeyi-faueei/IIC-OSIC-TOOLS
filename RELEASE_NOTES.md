@@ -7,6 +7,7 @@ This document summarizes the most important changes of the individual releases o
 * Add required tools for PULP-platform (morty, bender, svase, sv2v, verible).
 * Add `surelog`.
 * Add `pygmid`.
+* Add `xcircuit`.
 * Bump various tools versions.
 * Fixed VHDL usage in OpenLane.
 * Simplified tools paths by removing tool version.
