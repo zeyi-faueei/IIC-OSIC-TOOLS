@@ -139,7 +139,6 @@ Below is a list of the current tools already installed and ready to use (note th
 * [vlsirtools](https://github.com/Vlsir/Vlsir) interchange formats for chip design.
 * [xschem](https://github.com/StefanSchippers/xschem.git) schematic editor
 * [xyce](https://github.com/Xyce/Xyce.git) fast parallel SPICE simulator (incl. `xdm` netlist conversion tool)
-* [xcircuit](https://github.com/RTimothyEdwards/XCircuit) schematic drawing tool with SPICE export
 * [xyce](https://github.com/Xyce/Xyce) fast parallel SPICE simulator (incl. `xdm` netlist conversion tool)
 * [yosys](https://github.com/YosysHQ/yosys) Verilog synthesis tool (with GHDL plugin for VHDL synthesis), incl. `eqy` (equivalence checker), `sby` (formal verification), and `mcy` (mutation coverage)
 
