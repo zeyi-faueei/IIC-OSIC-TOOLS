@@ -311,16 +311,6 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
     bash /images/verilator/scripts/install.sh
 
 #######################################################################
-# Compile xcircuit
-#######################################################################
-FROM base AS xcircuit
-ARG XCIRCUIT_REPO_URL="https://github.com/RTimothyEdwards/XCircuit"
-ARG XCIRCUIT_REPO_COMMIT="b6d0b096a6a4730a4255efb50191e03cfa9b5496"
-ARG XCIRCUIT_NAME="xcircuit"
-RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
-    bash /images/xcircuit/scripts/install.sh
-
-#######################################################################
 # Compile xschem
 #######################################################################
 FROM base AS xschem
@@ -449,7 +439,6 @@ COPY --from=riscv-gnu-toolchain          ${TOOLS}/              ${TOOLS}/
 COPY --from=slang                        ${TOOLS}/              ${TOOLS}/
 COPY --from=surelog                      ${TOOLS}/              ${TOOLS}/
 COPY --from=verilator                    ${TOOLS}/              ${TOOLS}/
-COPY --from=xcircuit                     ${TOOLS}/              ${TOOLS}/
 COPY --from=xschem                       ${TOOLS}/              ${TOOLS}/
 COPY --from=xyce                         ${TOOLS}/              ${TOOLS}/
 COPY --from=xyce-xdm                     ${TOOLS}/              ${TOOLS}/
