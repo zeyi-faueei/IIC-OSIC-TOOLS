@@ -132,6 +132,7 @@ apt -y install \
 	patch \
 	patchutils \
 	pciutils \
+	perl-doc \
 	pkg-config \
 	python3 \
 	python3-aiohttp \
