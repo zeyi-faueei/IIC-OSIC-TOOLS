@@ -85,6 +85,9 @@
 - name: vlogtoverilog
   repo: https://github.com/RTimothyEdwards/qflow
   commit: 1.4.103
+- name: xcircuit
+  repo: https://github.com/RTimothyEdwards/XCircuit
+  commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
   commit: 8b5ed3f32ed77b67044b7097376e845be518cdc2
