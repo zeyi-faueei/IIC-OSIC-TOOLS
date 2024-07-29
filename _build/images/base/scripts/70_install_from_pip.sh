@@ -18,9 +18,11 @@ pip3 install --upgrade --no-cache-dir \
 	matplotlib-inline \
 	maturin \
 	meson \
+	mpi4py \
 	ninja \
 	numexpr \
 	numpy \
+	orderedmultidict \
 	panda \
 	pandas \
 	pathspec \
