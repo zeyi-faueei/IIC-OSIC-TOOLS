@@ -24,7 +24,6 @@ apt -y install \
 	cmake \
 	csh \
 	curl \
-	cython3 \
 	debhelper \
 	default-jre \
 	desktop-file-utils \
