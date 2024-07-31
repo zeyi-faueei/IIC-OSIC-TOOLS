@@ -116,7 +116,6 @@ export PYTHONPATH=/headless/.local/lib/python3.10/site-packages:$PYTHONPATH
 # Tool Aliases
 #----------------------------------------
 
-alias magic='magic -d X11 -rcfile $PDKPATH/libs.tech/magic/$PDK.magicrc'
 alias mmagic='MAGTYPE=mag magic'
 alias lmagic='MAGTYPE=maglef magic'
 
