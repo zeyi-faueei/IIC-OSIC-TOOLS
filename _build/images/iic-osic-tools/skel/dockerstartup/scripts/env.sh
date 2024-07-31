@@ -123,9 +123,6 @@ alias lmagic='MAGTYPE=maglef magic'
 alias k='klayout -nn $PDKPATH/libs.tech/klayout/tech/$PDK.lyt'
 alias ke='klayout -e -nn $PDKPATH/libs.tech/klayout/tech/$PDK.lyt'
 
-alias xschem='xschem -b --rcfile $PDKPATH/libs.tech/xschem/xschemrc'
-alias xschemtcl='\xschem --rcfile $PDKPATH/libs.tech/xschem/xschemrc'
-
 #alias openlane='openlane --manual-pdk'
 #FIXME WA for OpenLane2 until the ticket is merged into OpenROAD, see https://github.com/efabless/openlane2/issues/440
 alias openlane='openlane --manual-pdk --skip Odb.CheckDesignAntennaProperties --skip Odb.CheckMacroAntennaProperties'
