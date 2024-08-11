@@ -45,7 +45,6 @@ apt -y install \
 	gperf \
 	gpg \
 	graphviz \
-	gtk2-engines-pixbuf \
 	help2man \
 	language-pack-en-base \
 	lcov \
@@ -74,7 +73,7 @@ apt -y install \
 	libgomp1 \
 	libgoogle-perftools-dev \
 	libgtk-3-dev \
-	libgtk2.0-dev \
+	libgtk-4-dev \
 	libjpeg-dev \
 	libjudy-dev \
 	liblapack-dev \
