@@ -33,7 +33,7 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
 #######################################################################
 FROM basepkg AS magic
 ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
-ARG MAGIC_REPO_COMMIT="8.3.486"
+ARG MAGIC_REPO_COMMIT="8.3.487"
 ARG MAGIC_NAME="magic"
 COPY images/magic/scripts/install.sh install.sh
 RUN --mount=type=bind,source=images/magic,target=/images/magic \
@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base AS ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="5b5a300dacbac9658fefb4d2cada8ba1e67c331e"
+ARG GHDL_REPO_COMMIT="9567e46f7df97b7d04979f8f6036a825edf879cb"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -127,7 +127,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 FROM base AS gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="e9b5cce38c5c5272d60ff9baf71df027b3607ebd"
+ARG GTKWAVE_REPO_COMMIT="d2005675801b89ef0201c6968cee8419847dc5af"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -157,7 +157,7 @@ RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
 #######################################################################
 FROM basepkg AS klayout
 ARG KLAYOUT_REPO_URL="https://github.com/KLayout/klayout"
-ARG KLAYOUT_REPO_COMMIT="v0.29.4"
+ARG KLAYOUT_REPO_COMMIT="v0.29.5"
 ARG KLAYOUT_NAME="klayout"
 RUN --mount=type=bind,source=images/klayout,target=/images/klayout \
     bash /images/klayout/scripts/install.sh
@@ -207,7 +207,7 @@ RUN --mount=type=bind,source=images/ngspyce,target=/images/ngspyce \
 #######################################################################
 FROM base AS nvc
 ARG NVC_REPO_URL="https://github.com/nickg/nvc"
-ARG NVC_REPO_COMMIT="r1.13.0"
+ARG NVC_REPO_COMMIT="r1.13.2"
 ARG NVC_NAME="nvc"
 RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
     bash /images/nvc/scripts/install.sh
@@ -217,7 +217,7 @@ RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
 #######################################################################
 FROM base AS openroad_app
 ARG OPENROAD_APP_REPO_URL="https://github.com/The-OpenROAD-Project/OpenROAD.git"
-ARG OPENROAD_APP_REPO_COMMIT="d423155d69de7f683a23f6916ead418a615ad4ad"
+ARG OPENROAD_APP_REPO_COMMIT="b16bda7e82721d10566ff7e2b68f1ff0be9f9e38"
 ARG OPENROAD_APP_NAME="openroad"
 RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
     bash /images/openroad/scripts/install.sh
@@ -255,7 +255,7 @@ RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
 #######################################################################
 FROM base AS surelog
 ARG SURELOG_REPO_URL="https://github.com/chipsalliance/Surelog"
-ARG SURELOG_REPO_COMMIT="v1.83"
+ARG SURELOG_REPO_COMMIT="v1.84"
 ARG SURELOG_NAME="surelog"
 RUN --mount=type=bind,source=images/surelog,target=/images/surelog \
     bash /images/surelog/scripts/install.sh
@@ -285,7 +285,7 @@ RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
 #######################################################################
 FROM base AS riscv-gnu-toolchain
 ARG RISCV_GNU_TOOLCHAIN_REPO_URL="https://github.com/riscv-collab/riscv-gnu-toolchain.git"
-ARG RISCV_GNU_TOOLCHAIN_REPO_COMMIT="2024.04.12"
+ARG RISCV_GNU_TOOLCHAIN_REPO_COMMIT="2024.08.06"
 ARG RISCV_GNU_TOOLCHAIN_NAME="riscv-gnu-toolchain"
 COPY images/riscv-gnu-toolchain/scripts/install.sh install.sh
 RUN bash install.sh
@@ -295,7 +295,7 @@ RUN bash install.sh
 #######################################################################
 FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="928045a4da4e1239831b2d0cbd75f25b63ee07d5"
+ARG SLANG_REPO_COMMIT="2b5f1ca05c8be7849b8f9b8a8f808c88b5744a7a"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -325,7 +325,7 @@ RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="8b5ed3f32ed77b67044b7097376e845be518cdc2"
+ARG XSCHEM_REPO_COMMIT="f850877b1e0fa6fc36ac4624f0a1ed1473ea7b52"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -353,7 +353,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
 #######################################################################
 FROM base AS yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
-ARG YOSYS_REPO_COMMIT="yosys-0.43"
+ARG YOSYS_REPO_COMMIT="yosys-0.44"
 ARG YOSYS_NAME="yosys"
 ARG YOSYS_EQY_REPO_URL="https://github.com/YosysHQ/eqy.git"
 ARG YOSYS_EQY_NAME="yosys_eqy"
@@ -375,7 +375,7 @@ RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-
 
 FROM base AS synlig-yosys-plugin
 ARG SYNLIG_YOSYS_PLUGIN_REPO_URL="https://github.com/chipsalliance/synlig.git"
-ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="3e3cdc33140edfd25cca5229555dcd6dc9d14468"
+ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="218986a57089bff1bf2b1d7d80b52514d9d23f7d"
 ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yosys-plugin \
