@@ -70,7 +70,7 @@ if [ -z ${FOSS_PATH_SET+x} ]; then
         export SAK=$TOOLS/sak/
         export PATH=$TOOLS/bin:$SAK:/usr/local/sbin:$PATH
 
-        # FIXME: OpenROAD in Ubuntu 22.04 does not find the PIP modules, so use PYTHONPATH
+        # OpenROAD in Ubuntu 22.04 does not find the PIP modules, so use PYTHONPATH
         PYTHONPATH=$(python -c "import sys; print(':'.join(x for x in sys.path if x))") && export PYTHONPATH 
         _path_add_tool_python "ngspyce"
         _path_add_tool_python "pyopus"
@@ -95,11 +95,11 @@ export PDKPATH=$PDK_ROOT/$PDK
 export STD_CELL_LIBRARY=sky130_fd_sc_hd
 
 
-# FIXME: this gets rid of a few libGL errors
+# FIXME this gets rid of a few libGL errors
 # https://unix.stackexchange.com/questions/589236/libgl-error-no-matching-fbconfigs-or-visuals-found-glxgears-error-docker-cu
 export LIBGL_ALWAYS_INDIRECT=1
 
-# FIXME: this gets rid of the DBUS warning
+# FIXME this gets rid of the DBUS warning
 # https://unix.stackexchange.com/questions/230238/x-applications-warn-couldnt-connect-to-accessibility-bus-on-stderr/230442#230442
 export NO_AT_BRIDGE=1
 
@@ -122,9 +122,7 @@ alias lmagic='MAGTYPE=maglef magic'
 alias k='klayout -nn $PDKPATH/libs.tech/klayout/tech/$PDK.lyt'
 alias ke='klayout -e -nn $PDKPATH/libs.tech/klayout/tech/$PDK.lyt'
 
-#alias openlane='openlane --manual-pdk'
-#FIXME WA for OpenLane2 until the ticket is merged into OpenROAD, see https://github.com/efabless/openlane2/issues/440
-alias openlane='openlane --manual-pdk --skip Odb.CheckDesignAntennaProperties --skip Odb.CheckMacroAntennaProperties'
+alias openlane='openlane --manual-pdk'
 
 #FIXME Show hint that OpenLane(1) has been removed
 alias flow.tcl='printf "[INFO] OpenLane(1) has been depreciated.\n[INFO] Please use OpenLane2 (start with <openlane>).\n"'
