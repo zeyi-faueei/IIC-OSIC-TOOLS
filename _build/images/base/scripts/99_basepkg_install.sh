@@ -18,7 +18,6 @@ pip3 install --upgrade --no-cache-dir \
 	fusesoc==2.3 \
 	gdsfactory==8.7.0 \
 	gdspy==1.6.13 \
-	hdl21==6.0.0 \
 	openlane==2.1.2 \
 	openram==1.2.48 \
 	pygmid==1.2.12 \
@@ -30,7 +29,6 @@ pip3 install --upgrade --no-cache-dir \
 	scikit-rf==1.2.0 \
 	siliconcompiler==0.26.1 \
 	spyci==1.0.2 \
-	vlsirtools==6.0.0 \
 	volare==0.18.1
 
 #FIXME OpenLane2 goes last to get its dependencies right

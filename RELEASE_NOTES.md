@@ -17,6 +17,7 @@ This document summarizes the most important changes of the individual releases o
 * Move install for as many Python-packages as possible from APT to PIP (to get newer versions).
 * Remove alias for `xschem` and `magic`, instead properly install RC files in `/headless`.
 * Remove `netlistsvg`, as it is requiring the large node.js package.
+* Remove `hdl21` and `vlsirtools` to allow `numpy` 2.
 
 ## 2024.07
 
