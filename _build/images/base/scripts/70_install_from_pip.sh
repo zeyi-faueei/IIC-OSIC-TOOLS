@@ -6,6 +6,11 @@ set -e
 # FIXME: PIP upgrade fails on x86, so remove it
 #python3 -m pip install --upgrade pip
 
+# FIXME this is a temporary WA until this is fixed
+# https://github.com/imageio/imageio/issues/1097
+pip3 install --upgrade --no-cache-dir \
+	imageio==2.34.2
+
 echo "[INFO] Install support packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	bottleneck \
