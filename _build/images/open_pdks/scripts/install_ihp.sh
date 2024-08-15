@@ -21,10 +21,6 @@ cd ihp || exit 1
 git checkout dev
 git submodule update --init --recursive
 
-# Some modifications/cleanup needed of stock IHP PDK
-# 1) Remove the `pre_osdi` line from the examples
-find . -name "*.sch" -exec sed -i '/pre_osdi/d' {} \;
-
 # Now move to the proper location
 if [ -d $IHP_PDK ]; then
 	mv $IHP_PDK "$PDK_ROOT/$MY_PDK"
