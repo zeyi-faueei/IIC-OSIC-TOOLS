@@ -366,7 +366,7 @@ RUN --mount=type=bind,source=images/yosys,target=/images/yosys \
 
 FROM base AS ghdl-yosys-plugin
 ARG GHDL_YOSYS_PLUGIN_REPO_URL="https://github.com/ghdl/ghdl-yosys-plugin.git"
-ARG GHDL_YOSYS_PLUGIN_REPO_COMMIT="20e0931ecc0907f2278b507ed64d170ea2276e67"
+ARG GHDL_YOSYS_PLUGIN_REPO_COMMIT="511412f984d64ed7c46c4bdbd839f4b3c48f6fa5"
 ARG GHDL_YOSYS_PLUGIN_NAME="ghdl-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 COPY --from=ghdl	${TOOLS}    ${TOOLS}

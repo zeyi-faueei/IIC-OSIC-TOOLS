@@ -15,7 +15,7 @@
   commit: 9567e46f7df97b7d04979f8f6036a825edf879cb
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
-  commit: 20e0931ecc0907f2278b507ed64d170ea2276e67
+  commit: 511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
 - name: gtkwave
   repo: https://github.com/gtkwave/gtkwave
   commit: 6b18383823a0a7bbb68e9d99b4fc141d012ca103
