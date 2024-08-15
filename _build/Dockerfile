@@ -187,7 +187,7 @@ RUN --mount=type=bind,source=images/netgen,target=/images/netgen \
 #######################################################################
 FROM open_pdks AS ngspice
 ARG NGSPICE_REPO_URL="https://github.com/danchitnis/ngspice-sf-mirror"
-ARG NGSPICE_REPO_COMMIT="ngspice-43"
+ARG NGSPICE_REPO_COMMIT="ngspice-42"
 ARG NGSPICE_NAME="ngspice"
 RUN --mount=type=bind,source=images/ngspice,target=/images/ngspice \
     bash /images/ngspice/scripts/install.sh
