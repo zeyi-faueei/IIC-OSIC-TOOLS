@@ -3,7 +3,7 @@
   commit: 19d30fc942642b14dc24e95331cd4777c8dcbad9
 - name: cvc_rv
   repo: https://github.com/d-m-bailey/cvc
-  commit: v1.1.5
+  commit: "v1.1.5"
 - name: gaw3-xschem
   repo: https://github.com/StefanSchippers/xschem-gaw.git
   commit: 640c672e1ad768b92eb6a15943459a1d2214e1dc
@@ -15,10 +15,10 @@
   commit: 9567e46f7df97b7d04979f8f6036a825edf879cb
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
-  commit: 511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
+  commit: 20e0931ecc0907f2278b507ed64d170ea2276e67
 - name: gtkwave
   repo: https://github.com/gtkwave/gtkwave
-  commit: d2005675801b89ef0201c6968cee8419847dc5af
+  commit: 6b18383823a0a7bbb68e9d99b4fc141d012ca103
 - name: irsim
   repo: https://github.com/rtimothyedwards/irsim
   commit: a7884acc04cd94017779893d381b7e93d8895587
@@ -27,25 +27,25 @@
   commit: 676b36e4554f119d0606ade79db2fba6834d3445
 - name: klayout
   repo: https://github.com/KLayout/klayout
-  commit: v0.29.5
+  commit: "v0.29.5"
 - name: libman
   repo: https://github.com/IHP-GmbH/LibMan
   commit: a4537c1fba19966e80408a7b224001d5697ff1e6
 - name: magic
   repo: https://github.com/rtimothyedwards/magic
-  commit: 8.3.487
+  commit: "8.3.488"
 - name: netgen
   repo: https://github.com/rtimothyedwards/netgen
-  commit: 1.5.276
+  commit: "1.5.276"
 - name: ngspice
   repo: https://github.com/danchitnis/ngspice-sf-mirror
-  commit: ngspice-43
+  commit: "ngspice-43"
 - name: ngspyce
   repo: https://github.com/ignamv/ngspyce
   commit: 154a2724080e3bf15827549bba9f315cd11984fe
 - name: nvc
   repo: https://github.com/nickg/nvc
-  commit: r1.13.2
+  commit: "r1.13.2"
 - name: open_pdks
   repo: https://github.com/RTimothyEdwards/open_pdks
   commit: bdc9412b3e468c102d01b7cf6337be06ec6e9c9a
@@ -66,7 +66,7 @@
   commit: "2024.08.06"
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: 2b5f1ca05c8be7849b8f9b8a8f808c88b5744a7a
+  commit: 2fd768f3aa10d7051f4ca156c60e7d762cb59c34
 - name: surelog
   repot: https://github.com/chipsalliance/Surelog
   commit: "v1.84"
@@ -81,22 +81,22 @@
   commit: "24.3.0"
 - name: verilator
   repo: https://github.com/verilator/verilator
-  commit: v5.026
+  commit: "v5.026"
 - name: xcircuit
   repo: https://github.com/RTimothyEdwards/XCircuit
   commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: f850877b1e0fa6fc36ac4624f0a1ed1473ea7b52
+  commit: 652268c4d0c17f125c76d006e11b726515ebcf20
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
-  commit: Release-7.8.0
+  commit: "Release-7.8.0"
 - name: xyce-xdm
   repo: https://github.com/Xyce/XDM
-  commit: Release-2.7.0
+  commit: "Release-2.7.0"
 - name: yosys
   repo: https://github.com/YosysHQ/yosys
-  commit: yosys-0.44
+  commit: "yosys-0.44"
 - name: yosys_eqy
   repo: https://github.com/YosysHQ/eqy.git
 - name: yosys_sby

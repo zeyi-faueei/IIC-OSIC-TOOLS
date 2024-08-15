@@ -12,11 +12,11 @@ pip3 install --upgrade --no-cache-dir \
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth==0.5.1 \
-	cace==2.4.1 \
+	cace==2.4.5 \
 	cocotb==1.9.0 \
 	edalize==0.5.4 \
 	fusesoc==2.3 \
-	gdsfactory==8.7.0 \
+	gdsfactory==8.7.2 \
 	gdspy==1.6.13 \
 	openlane==2.1.2 \
 	openram==1.2.48 \

@@ -33,7 +33,7 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
 #######################################################################
 FROM basepkg AS magic
 ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
-ARG MAGIC_REPO_COMMIT="8.3.487"
+ARG MAGIC_REPO_COMMIT="8.3.488"
 ARG MAGIC_NAME="magic"
 COPY images/magic/scripts/install.sh install.sh
 RUN --mount=type=bind,source=images/magic,target=/images/magic \
@@ -127,7 +127,7 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 #######################################################################
 FROM base AS gtkwave
 ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="d2005675801b89ef0201c6968cee8419847dc5af"
+ARG GTKWAVE_REPO_COMMIT="6b18383823a0a7bbb68e9d99b4fc141d012ca103"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -295,7 +295,7 @@ RUN bash install.sh
 #######################################################################
 FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="2b5f1ca05c8be7849b8f9b8a8f808c88b5744a7a"
+ARG SLANG_REPO_COMMIT="2fd768f3aa10d7051f4ca156c60e7d762cb59c34"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -325,7 +325,7 @@ RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="f850877b1e0fa6fc36ac4624f0a1ed1473ea7b52"
+ARG XSCHEM_REPO_COMMIT="652268c4d0c17f125c76d006e11b726515ebcf20"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -366,7 +366,7 @@ RUN --mount=type=bind,source=images/yosys,target=/images/yosys \
 
 FROM base AS ghdl-yosys-plugin
 ARG GHDL_YOSYS_PLUGIN_REPO_URL="https://github.com/ghdl/ghdl-yosys-plugin.git"
-ARG GHDL_YOSYS_PLUGIN_REPO_COMMIT="511412f984d64ed7c46c4bdbd839f4b3c48f6fa5"
+ARG GHDL_YOSYS_PLUGIN_REPO_COMMIT="20e0931ecc0907f2278b507ed64d170ea2276e67"
 ARG GHDL_YOSYS_PLUGIN_NAME="ghdl-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 COPY --from=ghdl	${TOOLS}    ${TOOLS}
