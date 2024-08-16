@@ -43,8 +43,8 @@ RUN --mount=type=bind,source=images/magic,target=/images/magic \
 # Compile openvaf
 #######################################################################
 FROM basepkg AS openvaf
-ARG OPENVAF_REPO_URL="https://github.com/arpadbuermen/OpenVAF"
-ARG OPENVAF_REPO_COMMIT="a5898f16d2f23e4cef25d0aa5c4db8c71664fb12"
+ARG OPENVAF_REPO_URL="https://github.com/dwarning/OpenVAF.git"
+ARG OPENVAF_REPO_COMMIT="0333f5570186ec0e84be889bf8f06e88605d36e4"
 ARG OPENVAF_NAME="openvaf"
 ENV OPENVAF_NAME=${OPENVAF_NAME}
 RUN --mount=type=bind,source=images/openvaf,target=/images/openvaf \
