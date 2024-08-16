@@ -32,4 +32,9 @@ fi
 cd "$PDK_ROOT"/"$MY_PDK"/libs.tech/ngspice/openvaf || exit 1
 
 # Compile the PSP model
-"$TOOLS/$OPENVAF_NAME/bin/openvaf" --target_cpu x86-64 psp103_nqs.va
+if [ "$(arch)" == "aarch64" ]; then
+    TARGETCPU=""
+else
+    TARGETCPU="--target_cpu x86-64"
+fi
+"$TOOLS/$OPENVAF_NAME/bin/openvaf" "$TARGETCPU" psp103_nqs.va
