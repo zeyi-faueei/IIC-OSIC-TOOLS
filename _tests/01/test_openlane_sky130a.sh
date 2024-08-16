@@ -6,7 +6,7 @@
 #
 # We do this only for sky130A for now.
 
-RESULT=/tmp/result01.log
+RESULT=/tmp/result_ol_sky130a.log
 
 # Switch to sky130A PDK
 # shellcheck source=/dev/null
