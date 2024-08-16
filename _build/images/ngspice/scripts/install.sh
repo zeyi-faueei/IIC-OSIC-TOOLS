@@ -47,7 +47,7 @@ if [ -f "$PDK_ROOT"/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi ]; then
     sed -i "/vbic_4T_et_cf.osdi/s/^/#/" "$FNAME"
 
     # Copy OSDI PSP model for IHP
-    cp "$PDK_ROOT/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi" "${TOOLS}/${NGSPICE_NAME}/lib/ngspice/psp103.osdi"
+    cp "$PDK_ROOT/sg13g2/libs.tech/ngspice/openvaf/psp103_nqs.osdi" "${TOOLS}/${NGSPICE_NAME}/lib/ngspice/psp103_nqs.osdi"
 fi
 
 # Add BSIMCMG model, required for ASAP7
