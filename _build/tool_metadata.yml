@@ -39,7 +39,7 @@
   commit: "1.5.276"
 - name: ngspice
   repo: https://github.com/danchitnis/ngspice-sf-mirror
-  commit: "ngspice-42"
+  commit: "ngspice-43"
 - name: ngspyce
   repo: https://github.com/ignamv/ngspyce
   commit: 154a2724080e3bf15827549bba9f315cd11984fe
