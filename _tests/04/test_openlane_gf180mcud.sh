@@ -10,13 +10,15 @@
 # We do this only for gf180mcuD for now.
 
 RESULT=/tmp/result_ol_gf180mcud.log
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Switch to gf180mcuD PDK
 # shellcheck source=/dev/null
-unset STD_CELL_LIBRARY
 source iic-pdk-script.sh gf180mcuD gf180mcu_fd_sc_mcu7t5v0 > /dev/null
 # Run the OpenLane2 smoke test
-openlane --smoke-test > $RESULT
+mkdir -p /tmp/ol2_gf180mcu
+cp $DIR/counter.* /tmp/ol2_gf180mcu
+openlane --manual-pdk /tmp/ol2_gf180mcu/counter.json > $RESULT
 # Check if there is an error in the log
 if grep -q "ERROR" "$RESULT"; then
     echo "[ERROR] Test <OpenLane gf180mcuD> FAILED."
