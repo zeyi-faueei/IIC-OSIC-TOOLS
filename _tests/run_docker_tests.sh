@@ -15,6 +15,9 @@ CONTAINER_NAME=iic-osic-tools_test
 CMD=_run_tests.sh
 WORKDIR=/foss/designs
 
+# Check if newer image is available and pull if needed
+docker pull --quiet hpretl/iic-osic-tools:"$TAG" > /dev/null
+
 # Create the test runner script
 cat <<EOL > $CMD
 #!/bin/bash
