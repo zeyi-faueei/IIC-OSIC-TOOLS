@@ -4,6 +4,7 @@ This document summarizes the most important changes of the individual releases o
 
 ## 2024.08
 
+* Add test-suite for image release testing (very basic at this stage).
 * Add required tools for PULP-platform (`morty`, `bender`, `svase`, `sv2v`, `verible`).
 * Add RISC-V GNU toolchain back-in, as the PULP-platform is using it.
 * Add `surelog`.
