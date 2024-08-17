@@ -10,13 +10,15 @@
 # We do this only for sky130A for now.
 
 RESULT=/tmp/result_ol_sky130a.log
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Switch to sky130A PDK
 # shellcheck source=/dev/null
-unset STD_CELL_LIBRARY
 source iic-pdk-script.sh sky130A sky130_fd_sc_hd > /dev/null
 # Run the OpenLane2 smoke test
-openlane --smoke-test > $RESULT
+mkdir -p /tmp/ol2_sky130
+cp $DIR/counter.* /tmp/ol2_sky130
+openlane --manual-pdk /tmp/ol2_sky130/counter.json > $RESULT
 # Check if there is an error in the log
 if grep -q "ERROR" "$RESULT"; then
     echo "[ERROR] Test <OpenLane sky130A> FAILED."
