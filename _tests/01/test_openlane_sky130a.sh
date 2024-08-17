@@ -13,6 +13,7 @@ RESULT=/tmp/result_ol_sky130a.log
 
 # Switch to sky130A PDK
 # shellcheck source=/dev/null
+unset STD_CELL_LIBRARY
 source iic-pdk-script.sh sky130A sky130_fd_sc_hd > /dev/null
 # Run the OpenLane2 smoke test
 openlane --smoke-test > $RESULT

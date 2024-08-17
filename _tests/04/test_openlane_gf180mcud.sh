@@ -13,6 +13,7 @@ RESULT=/tmp/result_ol_gf180mcud.log
 
 # Switch to gf180mcuD PDK
 # shellcheck source=/dev/null
+unset STD_CELL_LIBRARY
 source iic-pdk-script.sh gf180mcuD gf180mcu_fd_sc_mcu7t5v0 > /dev/null
 # Run the OpenLane2 smoke test
 openlane --smoke-test > $RESULT
