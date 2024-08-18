@@ -4,18 +4,18 @@ This document summarizes the most important changes of the individual releases o
 
 ## 2024.08
 
-* Add test-suite for image release testing (very basic at this stage).
+* Add testsuite for image release testing (very basic at this stage).
 * Add required tools for PULP-platform (`morty`, `bender`, `svase`, `sv2v`, `verible`).
-* Add RISC-V GNU toolchain back-in, as the PULP-platform is using it.
+* Add RISC-V GNU tool chain back in, as the PULP-platform is using it.
 * Add `surelog`.
 * Add `pygmid`.
 * Add `xcircuit`.
-* Bump various tools versions.
-* Fixed VHDL flow in OpenLane2.
-* Simplified tool locations by removing tool version hash from directory tree (the original intentation was to be able to install different tool versions in parallel, but this was never really used).
-* Adapt Docker build script to use new large ARM build server. Now we build the image in parallel on two 100+ cores `aarch64` and `amd64` machines.
+* Bump various tool and PDK versions.
+* Fix VHDL flow in OpenLane2.
+* Simplify tool directory structure by removing the tool GitHub hashes from the directory tree (the original intention was to be able to install different tool versions in parallel, but this was never really used).
+* Adapt the Docker build script to use our new ARM build server. Now we build the image in parallel on two 100+ cores `aarch64` and `amd64` machines.
 * Adapt all tool build scripts to work in `/tmp`.
-* Move install for as many Python-packages as possible from APT to PIP (to get newer versions).
+* Move install for as many Python packages as possible from APT to PIP (to enable newer versions).
 * Remove alias for `xschem` and `magic`, instead properly install RC files in `/headless`.
 * Remove `netlistsvg`, as it is requiring the large node.js package.
 * Remove `hdl21` and `vlsirtools` to allow `numpy` 2.
