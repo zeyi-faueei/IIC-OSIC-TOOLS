@@ -10,6 +10,12 @@ Example:
 
 ```DOCKER_EXTRA_PARAMS='--security-opt seccomp=unconfined' ./start_x.sh```
 
+### Simulation errors in ngspice with sky130A/sky130B
+
+There are errors in ngspice when running a simulation using the sky130A/B PDKs. The root cause is not fully understood, but a remedy is to edit the file `/headless/.spiceinit`, and remove the line starting with `source`. 
+
+The best solution is to copy the PDK `.spiceinit` into `/headless` by running `cp -f /foss/pdks/sky130A/libs.tech/ngspice/spinit /headless/.spiceinit`. 
+
 ### OpenEMS
 
 The visualization tool "AppCSXCAD" will not work in the container with our default settings (`vtkXOpenGLRenderWindow (0x....): Cannot create GLX context.  Aborting.`). The issue has been located to be connected with the environment variable "LIBGL_ALWAYS_INDIRECT". As a workaround, we suggest either unsetting the variable or setting it to 0 (`unset LIBGL_ALWAYS_INDIRECT` or `export LIBGL_ALWAYS_INDIRECT=0`) which is persistent for the running terminal or run AppCSXCAD with the variable set to zero inline: `LIBGL_ALWAYS_INDIRECT=0 AppCSXCAD`.
