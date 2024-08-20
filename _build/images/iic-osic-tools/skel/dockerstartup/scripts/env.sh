@@ -93,7 +93,7 @@ export PYTHONPYCACHEPREFIX="/tmp/pycache"
 export PDK=sky130A
 export PDKPATH=$PDK_ROOT/$PDK
 export STD_CELL_LIBRARY=sky130_fd_sc_hd
-
+export SPICE_USERINIT_DIR=$PDK_ROOT/$PDK/libs.tech/ngspice
 
 # FIXME this gets rid of a few libGL errors
 # https://unix.stackexchange.com/questions/589236/libgl-error-no-matching-fbconfigs-or-visuals-found-glxgears-error-docker-cu

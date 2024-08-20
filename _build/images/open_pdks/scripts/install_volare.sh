@@ -21,11 +21,6 @@ if [ -d "$PDK_ROOT/sky130A" ]; then
 
     cd "$PDK_ROOT/sky130A/libs.tech/ngspice" || exit 1
 
-	# Add link for .spiceinit (harmonize with SG13G2)
-	ln -s spinit .spiceinit
-	# Turn on noise for resistors
-	echo "set enable_noisy_r" >> .spiceinit
-
 	"$SCRIPT_DIR/iic-spice-model-red.py" sky130.lib.spice tt
 	"$SCRIPT_DIR/iic-spice-model-red.py" sky130.lib.spice ss
 	"$SCRIPT_DIR/iic-spice-model-red.py" sky130.lib.spice ff
@@ -46,11 +41,6 @@ fi
 if [ -d "$PDK_ROOT/sky130B" ]; then
 
 	cd "$PDK_ROOT/sky130B/libs.tech/ngspice" || exit 1
-	
-	# Add link for .spiceinit (harmonize with SG13G2)
-	ln -s spinit .spiceinit
-	# Turn on noise for resistors
-	echo "set enable_noisy_r" >> .spiceinit
 	
 	"$SCRIPT_DIR/iic-spice-model-red.py" sky130.lib.spice tt
 	"$SCRIPT_DIR/iic-spice-model-red.py" sky130.lib.spice ss
