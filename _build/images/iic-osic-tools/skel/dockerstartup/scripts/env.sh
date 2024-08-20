@@ -108,9 +108,9 @@ if [ ! -d $XDG_RUNTIME_DIR ]; then
         chmod 700 $XDG_RUNTIME_DIR
 fi
 
-# Add local directories in /headless to the path so that the user can upgrade PIP packages
-export PATH=/headless/.local/bin:$PATH
-export PYTHONPATH=/headless/.local/lib/python3.10/site-packages:$PYTHONPATH
+# Add local directories in $HOME to the path so that the user can upgrade PIP packages
+export PATH=$HOME/.local/bin:$PATH
+export PYTHONPATH=$HOME/.local/lib/python3.10/site-packages:$PYTHONPATH
 
 #----------------------------------------
 # Tool Aliases
