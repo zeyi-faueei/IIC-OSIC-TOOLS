@@ -15,6 +15,7 @@ source iic-pdk-script.sh sky130A > /dev/null
 ngspice -b $DIR/test_nmos.spice > /dev/null 2>&1 || ERROR=1
 ngspice -b $DIR/test_pmos.spice > /dev/null 2>&1 || ERROR=1
 ngspice -b $DIR/test_analog.spice > /dev/null 2>&1 || ERROR=1
+ngspice -b $DIR/test_boris.spice > /dev/null 2>&1 || ERROR=1
 # Check if there is an error in the log
 if [ $ERROR -eq 1 ]; then
     echo "[ERROR] Test <ngspice with sky130a> FAILED."
