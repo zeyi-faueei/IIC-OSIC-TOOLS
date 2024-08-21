@@ -54,7 +54,7 @@
   commit: b16bda7e82721d10566ff7e2b68f1ff0be9f9e38
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
-  commit: 40edf1e66a5054ca1f332a3b59a1aa51db7839aa
+  commit: 83f97bd879a497f2ee1d3325d6c45048bdf45709
 - name: padring
   repo: https://github.com/donn/padring
   commit: b2a64abcc8561d758c0bcb3945117dcb13bd9dca

@@ -55,7 +55,7 @@ RUN --mount=type=bind,source=images/openvaf,target=/images/openvaf \
 #######################################################################
 FROM openvaf AS osic-multitool
 ARG OSIC_MULTITOOL_REPO_URL="https://github.com/iic-jku/osic-multitool.git"
-ARG OSIC_MULTITOOL_REPO_COMMIT="40edf1e66a5054ca1f332a3b59a1aa51db7839aa"
+ARG OSIC_MULTITOOL_REPO_COMMIT="83f97bd879a497f2ee1d3325d6c45048bdf45709"
 ARG OSIC_MULTITOOL_NAME="osic-multitool"
 RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool \
     bash /images/osic-multitool/scripts/install.sh
