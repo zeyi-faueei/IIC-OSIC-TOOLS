@@ -85,7 +85,6 @@ Below is a list of the current tools already installed and ready to use (note th
 * [cvc](https://github.com/d-m-bailey/cvc) circuit validity checker (ERC)
 * [edalize](https://github.com/olofk/edalize) Python abstraction library for EDA tools
 * [fusesoc](https://github.com/olofk/fusesoc) package manager and build tools for SoC
-* [gaw3-xschem](https://github.com/StefanSchippers/xschem-gaw.git) waveform plot tool for `xschem`
 * [gaw3-xschem](https://github.com/StefanSchippers/xschem-gaw) waveform plot tool for `xschem`
 * [gdsfactory](https://github.com/gdsfactory/gdsfactory) Python library for GDS generation
 * [gdspy](https://github.com/heitzmann/gdspy) Python module for the creation and manipulation of GDS files
@@ -95,7 +94,6 @@ Below is a list of the current tools already installed and ready to use (note th
 * [gtkwave](https://github.com/gtkwave/gtkwave) waveform plot tool for digital simulation
 * [sg13g2](https://github.com/IHP-GmbH/IHP-Open-PDK) IHP Microelectronics 130nm SiGe:C BiCMOS PDK (partial PDK, not fully supported yet; `xschem` and `ngspice` simulation works incl. PSP MOSFET model)
 * [irsim](https://github.com/rtimothyedwards/irsim) switch-level digital simulator
-* [iverilog](https://github.com/steveicarus/iverilog.git) Verilog simulator
 * [iverilog](https://github.com/steveicarus/iverilog) Verilog simulator
 * [hdl21](https://github.com/dan-fritchman/Hdl21) analog hardware description library
 * [klayout](https://github.com/KLayout/klayout) layout viewer and editor for GDS and OASIS
@@ -108,8 +106,6 @@ Below is a list of the current tools already installed and ready to use (note th
 * [open_pdks](https://github.com/RTimothyEdwards/open_pdks) PDK setup scripts
 * [openlane2](https://github.com/efabless/openlane2) rewrite of OpenLane in Python, 2nd generation
 * [openram](https://github.com/VLSIDA/OpenRAM) OpenRAM Python library
-* [openroad](https://github.com/The-OpenROAD-Project/OpenROAD.git) RTL2GDS engine used by `openlane2`
-* [osic-multitool](https://github.com/iic-jku/osic-multitool.git) collection of useful scripts and documentation
 * [openroad](https://github.com/The-OpenROAD-Project/OpenROAD) RTL2GDS engine used by `openlane2`
 * [osic-multitool](https://github.com/iic-jku/osic-multitool) collection of useful scripts and documentation
 * [padring](https://github.com/donn/padring) padring generation tool
@@ -128,17 +124,14 @@ Below is a list of the current tools already installed and ready to use (note th
 * [spyci](https://github.com/gmagno/spyci) analyze/plot `ngspice`/`xyce` output data with Python
 * [surelog](https://github.com/chipsalliance/Surelog) SystemVerilog parser, elaborator, and UHDM compiler
 * [synlig](https://github.com/chipsalliance/synlig) SystemVerilog plugin for `yosys`
-* [vlog2verilog](https://github.com/RTimothyEdwards/qflow.git) Verilog file conversion
 * [vlog2verilog](https://github.com/RTimothyEdwards/qflow) Verilog file conversion
 * [volare](https://github.com/efabless/volare) version manager (and builder) for open-source PDKs
 * [risc-v toolchain](https://github.com/riscv/riscv-gnu-toolchain) GNU compiler toolchain for RISC-V cores
 * [siliconcompiler](https://github.com/siliconcompiler/siliconcompiler) modular build system for hardware
-* [sky130](https://github.com/google/skywater-pdk.git) SkyWater Technologies 130nm CMOS PDK
 * [sky130](https://github.com/google/skywater-pdk) SkyWater Technologies 130nm CMOS PDK
 * [verilator](https://github.com/verilator/verilator) fast Verilog simulator
 * [vlsirtools](https://github.com/Vlsir/Vlsir) interchange formats for chip design.
-* [xschem](https://github.com/StefanSchippers/xschem.git) schematic editor
-* [xyce](https://github.com/Xyce/Xyce.git) fast parallel SPICE simulator (incl. `xdm` netlist conversion tool)
+* [xschem](https://github.com/StefanSchippers/xschem) schematic editor
 * [xyce](https://github.com/Xyce/Xyce) fast parallel SPICE simulator (incl. `xdm` netlist conversion tool)
 * [yosys](https://github.com/YosysHQ/yosys) Verilog synthesis tool (with GHDL plugin for VHDL synthesis), incl. `eqy` (equivalence checker), `sby` (formal verification), and `mcy` (mutation coverage)
 
