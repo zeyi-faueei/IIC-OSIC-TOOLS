@@ -354,6 +354,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
 FROM base AS yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
 ARG YOSYS_REPO_COMMIT="yosys-0.45"
+ARG YOSYS_REPO_COMMIT="0.45"
 ARG YOSYS_NAME="yosys"
 ARG YOSYS_EQY_REPO_URL="https://github.com/YosysHQ/eqy.git"
 ARG YOSYS_EQY_NAME="yosys_eqy"

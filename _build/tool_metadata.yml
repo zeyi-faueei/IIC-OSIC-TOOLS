@@ -97,6 +97,7 @@
 - name: yosys
   repo: https://github.com/YosysHQ/yosys
   commit: "yosys-0.45"
+  commit: "0.45"
 - name: yosys_eqy
   repo: https://github.com/YosysHQ/eqy.git
 - name: yosys_sby
