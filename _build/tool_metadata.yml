@@ -25,6 +25,7 @@
 - name: iverilog
   repo: https://github.com/steveicarus/iverilog.git
   commit: cbdaa865a10ce69d7c528cb2aa4c571641de0c62
+  commit: 34ed6f6f970517eca27f2b7d5371708a434d0c36
 - name: klayout
   repo: https://github.com/KLayout/klayout
   commit: "v0.29.6"

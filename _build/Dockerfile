@@ -148,6 +148,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 FROM base AS iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
 ARG IVERILOG_REPO_COMMIT="cbdaa865a10ce69d7c528cb2aa4c571641de0c62"
+ARG IVERILOG_REPO_COMMIT="34ed6f6f970517eca27f2b7d5371708a434d0c36"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
