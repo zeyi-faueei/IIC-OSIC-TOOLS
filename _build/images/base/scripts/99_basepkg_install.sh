@@ -10,6 +10,7 @@ pip3 install --upgrade --no-cache-dir \
 	jupyterlab-night
 
 #FIXME Adding simplesat with version 0.8.0 to fix fail on arm64
+#FIXME gdfsfactory >= 8.8.6 requires Python 3.11
 echo "[INFO] Install EDA packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	amaranth==0.5.2 \
