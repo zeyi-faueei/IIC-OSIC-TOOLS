@@ -147,7 +147,6 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 FROM base AS iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
-ARG IVERILOG_REPO_COMMIT="cbdaa865a10ce69d7c528cb2aa4c571641de0c62"
 ARG IVERILOG_REPO_COMMIT="34ed6f6f970517eca27f2b7d5371708a434d0c36"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
@@ -350,11 +349,10 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
     bash /images/xyce-xdm/scripts/install.sh
 
 #######################################################################
-# Compile yosys & ghdl plugin & synlig plugin
+# Compile yosys & ghdl plugin & synlig plugin & slang plugin
 #######################################################################
 FROM base AS yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
-ARG YOSYS_REPO_COMMIT="yosys-0.45"
 ARG YOSYS_REPO_COMMIT="0.45"
 ARG YOSYS_NAME="yosys"
 ARG YOSYS_EQY_REPO_URL="https://github.com/YosysHQ/eqy.git"
@@ -382,6 +380,14 @@ ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yosys-plugin \
     bash /images/synlig-yosys-plugin/scripts/install.sh
+
+FROM base AS slang-yosys-plugin
+ARG SLANG_YOSYS_PLUGIN_REPO_URL="https://github.com/povik/yosys-slang.git"
+ARG SLANG_YOSYS_PLUGIN_REPO_COMMIT="4e034b397b78689d9c7ee59c589509850221f62c"
+ARG SLANG_YOSYS_PLUGIN_NAME="slang-yosys-plugin"
+COPY --from=yosys	${TOOLS}    ${TOOLS}
+RUN --mount=type=bind,source=images/slang-yosys-plugin,target=/images/slang-yosys-plugin \
+    bash /images/slang-yosys-plugin/scripts/install.sh
 
 #######################################################################
 # Compile different components for the rftoolkit

@@ -24,7 +24,6 @@
   commit: a7884acc04cd94017779893d381b7e93d8895587
 - name: iverilog
   repo: https://github.com/steveicarus/iverilog.git
-  commit: cbdaa865a10ce69d7c528cb2aa4c571641de0c62
   commit: 34ed6f6f970517eca27f2b7d5371708a434d0c36
 - name: klayout
   repo: https://github.com/KLayout/klayout
@@ -68,6 +67,9 @@
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
   commit: eaaf3e48e82152964a39ee4ede0ff37063cd9d9c
+- name: slang-yosys-plugin
+  repo: https://github.com/povik/yosys-slang.git
+  commit: 4e034b397b78689d9c7ee59c589509850221f62c
 - name: surelog
   repot: https://github.com/chipsalliance/Surelog
   commit: "v1.84"
@@ -97,7 +99,6 @@
   commit: "Release-2.7.0"
 - name: yosys
   repo: https://github.com/YosysHQ/yosys
-  commit: "yosys-0.45"
   commit: "0.45"
 - name: yosys_eqy
   repo: https://github.com/YosysHQ/eqy.git
