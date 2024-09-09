@@ -463,6 +463,7 @@ COPY --from=xyce                         ${TOOLS}/              ${TOOLS}/
 COPY --from=xyce-xdm                     ${TOOLS}/              ${TOOLS}/
 COPY --from=yosys                        ${TOOLS}/              ${TOOLS}/
 COPY --from=ghdl-yosys-plugin            ${TOOLS}_add/          ${TOOLS}/
+COPY --from=slang-yosys-plugin           ${TOOLS}_add/          ${TOOLS}/
 COPY --from=synlig-yosys-plugin          ${TOOLS}_add/          ${TOOLS}/
 
 # Copy skeleton and tool version file
