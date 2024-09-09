@@ -18,7 +18,7 @@ pip3 install --upgrade --no-cache-dir \
 	cocotb==1.9.1 \
 	edalize==0.5.4 \
 	fusesoc==2.3 \
-	gdsfactory==8.8.5 \
+	gdsfactory==8.8.2 \
 	gdspy==1.6.13 \
 	openlane==2.1.3 \
 	openram==1.2.48 \
