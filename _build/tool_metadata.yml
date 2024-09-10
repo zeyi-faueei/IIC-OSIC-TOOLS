@@ -52,6 +52,9 @@
 - name: openroad_app
   repo: https://github.com/The-OpenROAD-Project/OpenROAD
   commit: b16bda7e82721d10566ff7e2b68f1ff0be9f9e38
+- name: openvaf
+  repo: https://github.com/dwarning/OpenVAF.git
+  commit: 0333f5570186ec0e84be889bf8f06e88605d36e4
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
   commit: 08d809eaf884a1ab276a34eec6946466c41111e3
