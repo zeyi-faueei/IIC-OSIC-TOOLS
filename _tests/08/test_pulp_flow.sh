@@ -33,6 +33,21 @@ test_fail() {
     echo -e "\n\n\n" >> $LOG
 }
 
+# if debug mode is enabled outout is verbose, otherwise not
+DEBUG=0
+while getopts "d" flag; do
+	case $flag in
+		d)
+			echo "[INFO] DEBUG is enabled!"
+			DEBUG=1
+			;;
+		*)
+			;;
+    esac
+done
+shift $((OPTIND-1))
+
+
 TMP=/tmp/test_08
 LOG=$TMP/tools.log
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -48,7 +63,7 @@ cp $DIR/Bender.yml $TMP/
 cp $DIR/*.sv       $TMP/
 cd $TMP/
 
-echo "Testing bender..."
+[ $DEBUG -eq 1 ] && echo "[INFO] Testing bender..."
 {
     test "bender update"
     test "bender checkout"
@@ -56,20 +71,20 @@ echo "Testing bender..."
     test "bender sources -f -t test_target > top.json"
 } &> $LOG
 
-echo "Testing morty..."
+[ $DEBUG -eq 1 ] && echo "[INFO] Testing morty..."
 {
     test_fail "morty -q -f error.json -o error_morty.sv"
     test "morty -q -f top.json -o top_morty.sv"
     test "morty -q -f top.json -D ERROR -o error_morty.sv"
 } &> $LOG
 
-echo "Testing svase..."
+[ $DEBUG -eq 1 ] && echo "[INFO] Testing svase..."
 {
     test_fail "svase top error_svase.sv error_morty.sv"
     test "svase top top_svase.sv top_morty.sv"
 } &> $LOG
 
-echo "Testing sv2v..."
+[ $DEBUG -eq 1 ] && echo "[INFO] Testing sv2v..."
 {
     test "sv2v --write top_sv2v.v top_svase.sv"
     test "yosys -Q -q -p \"read_verilog top_sv2v.v; synth;\""
@@ -77,9 +92,9 @@ echo "Testing sv2v..."
 
 
 if grep -q "\[ERROR\]" $LOG; then
-    echo "PULP-flow smoke test ERRORS. Check log at $LOG"
+    echo "[ERROR] Test <PULP-flow> FAILED! Check log at <$LOG>."
     exit 1
 else
-    echo "PULP-flow smoke test completed successfully."
+    echo "[INFO] Test <PULP-flow> passed."
     exit 0
 fi
