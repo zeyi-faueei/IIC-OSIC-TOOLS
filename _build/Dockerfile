@@ -289,6 +289,7 @@ ARG RISCV_GNU_TOOLCHAIN_REPO_COMMIT="2024.09.03"
 ARG RISCV_GNU_TOOLCHAIN_NAME="riscv-gnu-toolchain"
 COPY images/riscv-gnu-toolchain/scripts/install.sh install.sh
 RUN bash install.sh
+ENV RISCV=$TOOLS/$RISCV_GNU_TOOLCHAIN_NAME
 
 #######################################################################
 # Compile slang
@@ -299,6 +300,16 @@ ARG SLANG_REPO_COMMIT="eaaf3e48e82152964a39ee4ede0ff37063cd9d9c"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
+
+#######################################################################
+# Compile spike (RISCV ISA simulator)
+#######################################################################
+FROM riscv-gnu-toolchain AS spike
+ARG SPIKE_REPO_URL="https://github.com/riscv-software-src/riscv-isa-sim.git"
+ARG SPIKE_REPO_COMMIT="2e816f23cba244abe9201ba22dc2b4a891e63264"
+ARG SPIKE_NAME="spike"
+RUN --mount=type=bind,source=images/spike,target=/images/spike \
+    bash /images/spike/scripts/install.sh
 
 #######################################################################
 # Compile verilator
@@ -455,6 +466,7 @@ COPY --from=qucs-s                       ${TOOLS}/              ${TOOLS}/
 COPY --from=rftoolkit                    ${TOOLS}/              ${TOOLS}/
 COPY --from=riscv-gnu-toolchain          ${TOOLS}/              ${TOOLS}/
 COPY --from=slang                        ${TOOLS}/              ${TOOLS}/
+COPY --from=spike                        ${TOOLS}/              ${TOOLS}/
 COPY --from=surelog                      ${TOOLS}/              ${TOOLS}/
 COPY --from=verilator                    ${TOOLS}/              ${TOOLS}/
 COPY --from=xcircuit                     ${TOOLS}/              ${TOOLS}/

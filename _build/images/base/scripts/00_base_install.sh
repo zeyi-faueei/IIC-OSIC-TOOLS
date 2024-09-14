@@ -27,6 +27,7 @@ apt -y install \
 	debhelper \
 	default-jre \
 	desktop-file-utils \
+	device-tree-compiler \
 	devscripts \
 	doxygen \
 	expat \

@@ -121,6 +121,7 @@ Below is a list of the current tools already installed and ready to use (note th
 * [rggen](https://github.com/rggen/rggen) code generation tool for configuration and status registers
 * [schemdraw](https://github.com/cdelker/schemdraw) Python package for drawing electrical schematics
 * [slang](https://github.com/MikePopoloski/slang) SystemVerilog parsing and translation (e.g. to Verilog)
+* [spike](https://github.com/riscv-software-src/riscv-isa-sim) Spike RISC-V ISA simulator
 * [spyci](https://github.com/gmagno/spyci) analyze/plot `ngspice`/`xyce` output data with Python
 * [surelog](https://github.com/chipsalliance/Surelog) SystemVerilog parser, elaborator, and UHDM compiler
 * [synlig](https://github.com/chipsalliance/synlig) SystemVerilog plugin for `yosys`

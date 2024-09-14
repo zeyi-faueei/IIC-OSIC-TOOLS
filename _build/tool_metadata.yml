@@ -73,6 +73,9 @@
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
   commit: 4e034b397b78689d9c7ee59c589509850221f62c
+- name: spike
+  repo: https://github.com/riscv-software-src/riscv-isa-sim.git
+  commit: 2e816f23cba244abe9201ba22dc2b4a891e63264
 - name: surelog
   repot: https://github.com/chipsalliance/Surelog
   commit: "v1.84"
