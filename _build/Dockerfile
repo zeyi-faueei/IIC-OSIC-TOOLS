@@ -292,6 +292,16 @@ RUN --mount=type=bind,source=images/riscv-gnu-toolchain,target=/images/riscv-gnu
 ENV RISCV=$TOOLS/$RISCV_GNU_TOOLCHAIN_NAME
 
 #######################################################################
+# Compile riscv-pk (RISCV proxy kernel and boot loader)
+#######################################################################
+FROM riscv-gnu-toolchain AS riscv-pk
+ARG RISCV_PK_REPO_URL="https://github.com/riscv-software-src/riscv-pk.git"
+ARG RISCV_PK_REPO_COMMIT="1a52fa44aba49307137ea2ad5263613da33a877b"
+ARG RISCV_PK_NAME="riscv-pk"
+RUN --mount=type=bind,source=images/riscv-pk,target=/images/riscv-pk \
+    bash /images/riscv-pk/scripts/install.sh
+
+#######################################################################
 # Compile slang
 #######################################################################
 FROM base AS slang
@@ -465,6 +475,7 @@ COPY --from=qflow                        ${TOOLS}/              ${TOOLS}/
 COPY --from=qucs-s                       ${TOOLS}/              ${TOOLS}/
 COPY --from=rftoolkit                    ${TOOLS}/              ${TOOLS}/
 COPY --from=riscv-gnu-toolchain          ${TOOLS}/              ${TOOLS}/
+COPY --from=riscv-pk                     ${TOOLS}/              ${TOOLS}/
 COPY --from=slang                        ${TOOLS}/              ${TOOLS}/
 COPY --from=spike                        ${TOOLS}/              ${TOOLS}/
 COPY --from=surelog                      ${TOOLS}/              ${TOOLS}/

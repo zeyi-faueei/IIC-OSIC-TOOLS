@@ -118,6 +118,7 @@ Below is a list of the current tools already installed and ready to use (note th
 * [pyverilog](https://github.com/PyHDI/Pyverilog) Python toolkit for Verilog
 * RF toolkit with [FastHenry2](https://github.com/ediloren/FastHenry2), [FasterCap](https://github.com/ediloren/FasterCap), [openEMS](https://github.com/thliebig/openEMS), and [scikit-rf](https://github.com/scikit-rf/scikit-rf).
 * [qucs-s](https://github.com/ra3xdh/qucs_s) simulation environment with RF emphasis
+* [riscv-pk](https://github.com/riscv-software-src/riscv-pk) RISC-V proxy kernel and boot loader
 * [rggen](https://github.com/rggen/rggen) code generation tool for configuration and status registers
 * [schemdraw](https://github.com/cdelker/schemdraw) Python package for drawing electrical schematics
 * [slang](https://github.com/MikePopoloski/slang) SystemVerilog parsing and translation (e.g. to Verilog)

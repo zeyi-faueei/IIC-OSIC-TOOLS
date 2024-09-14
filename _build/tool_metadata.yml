@@ -67,6 +67,9 @@
 - name: riscv-gnu-toolchain
   repo: https://github.com/riscv-collab/riscv-gnu-toolchain.git
   commit: "2024.09.03"
+- name: riscv-pk
+  repo: https://github.com/riscv-software-src/riscv-pk.git
+  commit: 1a52fa44aba49307137ea2ad5263613da33a877b
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
   commit: eaaf3e48e82152964a39ee4ede0ff37063cd9d9c
