@@ -16,6 +16,21 @@ test() {
     echo -e "\n\n\n" >> $LOG
 }
 
+# if debug mode is enabled outout is verbose, otherwise not
+DEBUG=0
+while getopts "d" flag; do
+	case $flag in
+		d)
+			echo "[INFO] DEBUG is enabled!"
+			DEBUG=1
+			;;
+		*)
+			;;
+    esac
+done
+shift $((OPTIND-1))
+
+
 TMP=/tmp/test_09
 LOG=$TMP/tools.log
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -37,7 +52,7 @@ RISCV_CC=$RISCV_PREFIX-gcc
 RISCV_lD=$RISCV_PREFIX-ld
 RISCV_FLAGS="-march=rv32i -mabi=ilp32  -mcmodel=medany -static -ffast-math"
 
-echo "Testing riscv64-unknown-elf tools..."
+[ $DEBUG -eq 1 ] && echo "[INFO] Testing riscv64-unknown-elf tools..."
 {
     test "$RISCV_CC $RISCV_FLAGS -c main.c -o main.o"
     test "$RISCV_CC $RISCV_FLAGS -c crt0.S -o crt0.o"
@@ -45,9 +60,9 @@ echo "Testing riscv64-unknown-elf tools..."
 } &> $LOG
 
 if grep -q "\[ERROR\]" $LOG; then
-    echo "riscv64-unknown-elf smoke test ERRORS. Check log at $LOG"
+    echo "[ERROR] Test <riscv64-unknown-elf> FAILED! Check log at <$LOG>."
     exit 1
 else
-    echo "riscv64-unknown-elf smoke test completed successfully."
+    echo "[INFO] Test <riscv64-unknown-elf> passed."
     exit 0
 fi
