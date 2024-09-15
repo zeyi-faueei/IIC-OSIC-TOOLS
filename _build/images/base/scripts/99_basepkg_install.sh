@@ -20,7 +20,7 @@ pip3 install --upgrade --no-cache-dir \
 	fusesoc==2.3 \
 	gdsfactory==8.8.2 \
 	gdspy==1.6.13 \
-	openlane==2.1.3 \
+	openlane==2.1.4 \
 	openram==1.2.48 \
 	pygmid==1.2.12 \
 	pyrtl==0.11.2 \
@@ -30,7 +30,7 @@ pip3 install --upgrade --no-cache-dir \
 	schemdraw[svgmath]==0.19 \
 	scikit-rf==1.3.0 \
 	siliconcompiler==0.27.1 \
-	simplesat==0.8.0 \
+	simplesat==0.9.1 \
 	spyci==1.0.2 \
 	volare==0.19.1
 

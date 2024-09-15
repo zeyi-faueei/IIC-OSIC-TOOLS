@@ -32,8 +32,8 @@ RUN --mount=type=bind,source=images/base,target=/images/base \
 # Compile magic
 #######################################################################
 FROM basepkg AS magic
-ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic"
-ARG MAGIC_REPO_COMMIT="8.3.489"
+ARG MAGIC_REPO_URL="https://github.com/rtimothyedwards/magic.git"
+ARG MAGIC_REPO_COMMIT="8.3.490"
 ARG MAGIC_NAME="magic"
 COPY images/magic/scripts/install.sh install.sh
 RUN --mount=type=bind,source=images/magic,target=/images/magic \
@@ -64,7 +64,7 @@ RUN --mount=type=bind,source=images/osic-multitool,target=/images/osic-multitool
 # Create open_pdks
 #######################################################################
 FROM osic-multitool AS open_pdks
-ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks"
+ARG OPEN_PDKS_REPO_URL="https://github.com/RTimothyEdwards/open_pdks.git"
 ARG OPEN_PDKS_REPO_COMMIT="0fe599b2afb6708d281543108caf8310912f54af"
 ARG OPEN_PDKS_NAME="open_pdks"
 RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
@@ -76,7 +76,7 @@ RUN --mount=type=bind,source=images/open_pdks,target=/images/open_pdks \
 # Compile covered 
 #######################################################################
 FROM base AS covered
-ARG COVERED_REPO_URL="https://github.com/hpretl/verilog-covered"
+ARG COVERED_REPO_URL="https://github.com/hpretl/verilog-covered.git"
 ARG COVERED_REPO_COMMIT="19d30fc942642b14dc24e95331cd4777c8dcbad9"
 ARG COVERED_NAME="covered"
 RUN --mount=type=bind,source=images/covered,target=/images/covered \
@@ -86,7 +86,7 @@ RUN --mount=type=bind,source=images/covered,target=/images/covered \
 # Compile cvc_rv
 #######################################################################
 FROM base AS cvc_rv
-ARG CVC_RV_REPO_URL="https://github.com/d-m-bailey/cvc"
+ARG CVC_RV_REPO_URL="https://github.com/d-m-bailey/cvc.git"
 ARG CVC_RV_REPO_COMMIT="v1.1.5"
 ARG CVC_RV_NAME="cvc_rv"
 RUN --mount=type=bind,source=images/cvc_rv,target=/images/cvc_rv \
@@ -117,7 +117,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base AS ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="62e01d979ad7f33f8e47d07fb5de347abb89b734"
+ARG GHDL_REPO_COMMIT="6ace5ac8cf2b89c3c217d12953de55ae20c64fc8"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -126,8 +126,8 @@ RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
 # Compile gtkwave
 #######################################################################
 FROM base AS gtkwave
-ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave"
-ARG GTKWAVE_REPO_COMMIT="6b18383823a0a7bbb68e9d99b4fc141d012ca103"
+ARG GTKWAVE_REPO_URL="https://github.com/gtkwave/gtkwave.git"
+ARG GTKWAVE_REPO_COMMIT="0a800de96255f7fb11beadb6729fdf670da76ecb"
 ARG GTKWAVE_NAME="gtkwave"
 RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
     bash /images/gtkwave/scripts/install.sh
@@ -136,7 +136,7 @@ RUN --mount=type=bind,source=images/gtkwave,target=/images/gtkwave \
 # Compile irsim
 #######################################################################
 FROM base AS irsim
-ARG IRSIM_REPO_URL="https://github.com/rtimothyedwards/irsim"
+ARG IRSIM_REPO_URL="https://github.com/rtimothyedwards/irsim.git"
 ARG IRSIM_REPO_COMMIT="a7884acc04cd94017779893d381b7e93d8895587"
 ARG IRSIM_NAME="irsim"
 RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
@@ -147,7 +147,7 @@ RUN --mount=type=bind,source=images/irsim,target=/images/irsim \
 #######################################################################
 FROM base AS iverilog
 ARG IVERILOG_REPO_URL="https://github.com/steveicarus/iverilog.git"
-ARG IVERILOG_REPO_COMMIT="34ed6f6f970517eca27f2b7d5371708a434d0c36"
+ARG IVERILOG_REPO_COMMIT="25a84d5cfcecf67bfb7734929a1df98c4b137ce6"
 ARG IVERILOG_NAME="iverilog"
 RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
     bash /images/iverilog/scripts/install.sh
@@ -156,7 +156,7 @@ RUN --mount=type=bind,source=images/iverilog,target=/images/iverilog \
 # Compile klayout
 #######################################################################
 FROM basepkg AS klayout
-ARG KLAYOUT_REPO_URL="https://github.com/KLayout/klayout"
+ARG KLAYOUT_REPO_URL="https://github.com/KLayout/klayout.git"
 ARG KLAYOUT_REPO_COMMIT="v0.29.6"
 ARG KLAYOUT_NAME="klayout"
 RUN --mount=type=bind,source=images/klayout,target=/images/klayout \
@@ -166,7 +166,7 @@ RUN --mount=type=bind,source=images/klayout,target=/images/klayout \
 # Compile libman
 #######################################################################
 FROM base AS libman
-ARG LIBMAN_REPO_URL="https://github.com/IHP-GmbH/LibMan"
+ARG LIBMAN_REPO_URL="https://github.com/IHP-GmbH/LibMan.git"
 ARG LIBMAN_REPO_COMMIT="a4537c1fba19966e80408a7b224001d5697ff1e6"
 ARG LIBMAN_NAME="libman"
 RUN --mount=type=bind,source=images/libman,target=/images/libman \
@@ -176,7 +176,7 @@ RUN --mount=type=bind,source=images/libman,target=/images/libman \
 # Compile netgen
 #######################################################################
 FROM base AS netgen
-ARG NETGEN_REPO_URL="https://github.com/rtimothyedwards/netgen"
+ARG NETGEN_REPO_URL="https://github.com/rtimothyedwards/netgen.git"
 ARG NETGEN_REPO_COMMIT="1.5.277"
 ARG NETGEN_NAME="netgen"
 RUN --mount=type=bind,source=images/netgen,target=/images/netgen \
@@ -186,7 +186,7 @@ RUN --mount=type=bind,source=images/netgen,target=/images/netgen \
 # Compile ngspice
 #######################################################################
 FROM open_pdks AS ngspice
-ARG NGSPICE_REPO_URL="https://github.com/danchitnis/ngspice-sf-mirror"
+ARG NGSPICE_REPO_URL="https://github.com/danchitnis/ngspice-sf-mirror.git"
 ARG NGSPICE_REPO_COMMIT="ngspice-43"
 ARG NGSPICE_NAME="ngspice"
 RUN --mount=type=bind,source=images/ngspice,target=/images/ngspice \
@@ -196,7 +196,7 @@ RUN --mount=type=bind,source=images/ngspice,target=/images/ngspice \
 # Compile ngspyce
 #######################################################################
 FROM basepkg AS ngspyce
-ARG NGSPYCE_REPO_URL="https://github.com/ignamv/ngspyce"
+ARG NGSPYCE_REPO_URL="https://github.com/ignamv/ngspyce.git"
 ARG NGSPYCE_REPO_COMMIT="154a2724080e3bf15827549bba9f315cd11984fe"
 ARG NGSPYCE_NAME="ngspyce"
 RUN --mount=type=bind,source=images/ngspyce,target=/images/ngspyce \
@@ -206,7 +206,7 @@ RUN --mount=type=bind,source=images/ngspyce,target=/images/ngspyce \
 # Compile nvc (VHDL simulator)
 #######################################################################
 FROM base AS nvc
-ARG NVC_REPO_URL="https://github.com/nickg/nvc"
+ARG NVC_REPO_URL="https://github.com/nickg/nvc.git"
 ARG NVC_REPO_COMMIT="r1.13.3"
 ARG NVC_NAME="nvc"
 RUN --mount=type=bind,source=images/nvc,target=/images/nvc \
@@ -226,7 +226,7 @@ RUN --mount=type=bind,source=images/openroad,target=/images/openroad \
 # Compile padring
 #######################################################################
 FROM base AS padring
-ARG PADRING_REPO_URL="https://github.com/donn/padring"
+ARG PADRING_REPO_URL="https://github.com/donn/padring.git"
 ARG PADRING_REPO_COMMIT="b2a64abcc8561d758c0bcb3945117dcb13bd9dca"
 ARG PADRING_NAME="padring"
 RUN --mount=type=bind,source=images/padring,target=/images/padring \
@@ -254,7 +254,7 @@ RUN --mount=type=bind,source=images/pyopus,target=/images/pyopus \
 # Compile surelog
 #######################################################################
 FROM base AS surelog
-ARG SURELOG_REPO_URL="https://github.com/chipsalliance/Surelog"
+ARG SURELOG_REPO_URL="https://github.com/chipsalliance/Surelog.git"
 ARG SURELOG_REPO_COMMIT="v1.84"
 ARG SURELOG_NAME="surelog"
 RUN --mount=type=bind,source=images/surelog,target=/images/surelog \
@@ -274,8 +274,8 @@ RUN --mount=type=bind,source=images/qflow,target=/images/qflow \
 # Compile qucs-s
 #######################################################################
 FROM base AS qucs-s
-ARG QUCS_S_REPO_URL="https://github.com/ra3xdh/qucs_s"
-ARG QUCS_S_REPO_COMMIT="24.3.0"
+ARG QUCS_S_REPO_URL="https://github.com/ra3xdh/qucs_s.git"
+ARG QUCS_S_REPO_COMMIT="24.3.1"
 ARG QUCS_S_NAME="qucs-s"
 RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
     bash /images/qucs-s/scripts/install.sh
@@ -306,7 +306,7 @@ RUN --mount=type=bind,source=images/riscv-pk,target=/images/riscv-pk \
 #######################################################################
 FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="eaaf3e48e82152964a39ee4ede0ff37063cd9d9c"
+ARG SLANG_REPO_COMMIT="4e9b24973f80357337976360fb9e6cbc6febfec7"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -316,7 +316,7 @@ RUN --mount=type=bind,source=images/slang,target=/images/slang \
 #######################################################################
 FROM riscv-gnu-toolchain AS spike
 ARG SPIKE_REPO_URL="https://github.com/riscv-software-src/riscv-isa-sim.git"
-ARG SPIKE_REPO_COMMIT="2e816f23cba244abe9201ba22dc2b4a891e63264"
+ARG SPIKE_REPO_COMMIT="0cc5ecce053c6dfa44e4a865d2838fc8d7d771dc"
 ARG SPIKE_NAME="spike"
 RUN --mount=type=bind,source=images/spike,target=/images/spike \
     bash /images/spike/scripts/install.sh
@@ -325,7 +325,7 @@ RUN --mount=type=bind,source=images/spike,target=/images/spike \
 # Compile verilator
 #######################################################################
 FROM base AS verilator
-ARG VERILATOR_REPO_URL="https://github.com/verilator/verilator"
+ARG VERILATOR_REPO_URL="https://github.com/verilator/verilator.git"
 ARG VERILATOR_REPO_COMMIT="v5.028"
 ARG VERILATOR_NAME="verilator"
 RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
@@ -335,7 +335,7 @@ RUN --mount=type=bind,source=images/verilator,target=/images/verilator \
 # Compile xcircuit
 #######################################################################
 FROM base AS xcircuit
-ARG XCIRCUIT_REPO_URL="https://github.com/RTimothyEdwards/XCircuit"
+ARG XCIRCUIT_REPO_URL="https://github.com/RTimothyEdwards/XCircuit.git"
 ARG XCIRCUIT_REPO_COMMIT="b6d0b096a6a4730a4255efb50191e03cfa9b5496"
 ARG XCIRCUIT_NAME="xcircuit"
 RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
@@ -346,7 +346,7 @@ RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="e5015488f3db454cde7d979da19f16ac95de9b84"
+ARG XSCHEM_REPO_COMMIT="4ff7d0e2f8014807ae0c8667850078520e814c2f"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -363,7 +363,7 @@ RUN --mount=type=bind,source=images/xyce,target=/images/xyce \
     bash /images/xyce/scripts/install.sh
 
 FROM xyce AS xyce-xdm
-ARG XYCE_XDM_REPO_URL="https://github.com/Xyce/XDM"
+ARG XYCE_XDM_REPO_URL="https://github.com/Xyce/XDM.git"
 ARG XYCE_XDM_REPO_COMMIT="Release-2.7.0"
 ARG XYCE_XDM_NAME="xyce-xdm"
 RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
@@ -373,7 +373,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
 # Compile yosys & ghdl plugin & synlig plugin & slang plugin
 #######################################################################
 FROM base AS yosys
-ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys"
+ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys.git"
 ARG YOSYS_REPO_COMMIT="0.45"
 ARG YOSYS_NAME="yosys"
 ARG YOSYS_EQY_REPO_URL="https://github.com/YosysHQ/eqy.git"
@@ -404,7 +404,7 @@ RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yo
 
 FROM base AS slang-yosys-plugin
 ARG SLANG_YOSYS_PLUGIN_REPO_URL="https://github.com/povik/yosys-slang.git"
-ARG SLANG_YOSYS_PLUGIN_REPO_COMMIT="4e034b397b78689d9c7ee59c589509850221f62c"
+ARG SLANG_YOSYS_PLUGIN_REPO_COMMIT="92565470765f10d99f3a9d9e3ed85f3f92024a20"
 ARG SLANG_YOSYS_PLUGIN_NAME="slang-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/slang-yosys-plugin,target=/images/slang-yosys-plugin \
@@ -415,7 +415,7 @@ RUN --mount=type=bind,source=images/slang-yosys-plugin,target=/images/slang-yosy
 #######################################################################
 FROM base AS rftoolkit
 ARG RFTK_NAME="rftoolkit"
-ARG RFTK_FASTHENRY_REPO_URL="https://github.com/ediloren/FastHenry2"
+ARG RFTK_FASTHENRY_REPO_URL="https://github.com/ediloren/FastHenry2.git"
 ARG RFTK_FASTHENRY_REPO_COMMIT="363e43ed57ad3b9affa11cba5a86624fad0edaa9"
 ARG RFTK_FASTERCAP_REPO_URL="https://github.com/ediloren/FasterCap.git"
 ARG RFTK_FASTERCAP_REPO_COMMIT="b42179a8fdd25ab42fe45527282b4a738d7e7f87"
@@ -500,10 +500,10 @@ RUN find $STARTUPDIR/scripts -name '*.sh' -exec chmod a+x {} +
 RUN $STARTUPDIR/scripts/install.sh
 
 # Install examples
-#RUN git clone --depth=1 https://github.com/iic-jku/SKY130_SAR-ADC1 ${EXAMPLES}/SKY130_SAR-ADC1 && \
+#RUN git clone --depth=1 https://github.com/iic-jku/SKY130_SAR-ADC1.git ${EXAMPLES}/SKY130_SAR-ADC1 && \
 #    git clone --depth=1 https://github.com/iic-jku/SKY130_PLL1.git ${EXAMPLES}/SKY130_PLL1 && \
 #    git clone --depth=1 https://github.com/mabrains/Analog_blocks.git ${EXAMPLES}/SKY130_ANALOG-BLOCKS
-RUN git clone --depth=1 https://github.com/mole99/ota-5t ${EXAMPLES}/cace/ota-5t
+RUN git clone --depth=1 https://github.com/mole99/ota-5t.git ${EXAMPLES}/cace/ota-5t
 
 # Finalize setup/install
 RUN $STARTUPDIR/scripts/post_install.sh
