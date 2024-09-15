@@ -2,6 +2,17 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
+## 2024.09
+
+* Add `slang` plugin for `yosys` for direct SystemVerilog read-in.
+* Add `spike` RISC-V ISA simulator.
+* Add `riscv-pk` proxy kernel and boot loader.
+* Add `jq` for CLI JSON processing.
+* Bump various tool versions.
+* Fixed `ngspice` simulation issue with `sky130A`.
+* Remove a few outdated WA.
+* Remove `synlig` `yosys` plugin (depreciated).
+
 ## 2024.08
 
 * Add testsuite for image release testing (very basic at this stage).
@@ -31,13 +42,14 @@ This document summarizes the most important changes of the individual releases o
 ## 2024.05
 
 * Changing from OpenLane(1) to OpenLane2! OpenLane(1) is removed from the image. The tool versions used by OpenLane2 are now set to latest release (or if necessary the version required by OL2), instead of pinned (older) versions. This impacts the following tools:
-	* Magic
-	* Netgen
-	* OpenROAD
-	* OpenSTA
-	* Yosys
-	* PDK version
-	* Padring
+
+  * Magic
+  * Netgen
+  * OpenROAD
+  * OpenSTA
+  * Yosys
+  * PDK version
+  * Padring
 * Remove ALIGN (has only been included in `amd64` version, not in `arm64`).
 * Update various tool versions.
 
