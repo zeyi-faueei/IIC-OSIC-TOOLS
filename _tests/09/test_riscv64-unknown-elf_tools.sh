@@ -60,9 +60,9 @@ RISCV_FLAGS="-march=rv32i -mabi=ilp32  -mcmodel=medany -static -ffast-math"
 } &> $LOG
 
 if grep -q "\[ERROR\]" $LOG; then
-    echo "[ERROR] Test <riscv64-unknown-elf> FAILED! Check log at <$LOG>."
+    echo "[ERROR] Test <riscv64-unknown-elf toolchain> FAILED! Check log at <$LOG>."
     exit 1
 else
-    echo "[INFO] Test <riscv64-unknown-elf> passed."
+    echo "[INFO] Test <riscv64-unknown-elf toolchain> passed."
     exit 0
 fi
