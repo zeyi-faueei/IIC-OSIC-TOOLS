@@ -370,7 +370,7 @@ RUN --mount=type=bind,source=images/xyce-xdm,target=/images/xyce-xdm \
     bash /images/xyce-xdm/scripts/install.sh
 
 #######################################################################
-# Compile yosys & ghdl plugin & synlig plugin & slang plugin
+# Compile yosys & ghdl plugin & slang plugin
 #######################################################################
 FROM base AS yosys
 ARG YOSYS_REPO_URL="https://github.com/YosysHQ/yosys.git"
@@ -393,14 +393,6 @@ COPY --from=yosys	${TOOLS}    ${TOOLS}
 COPY --from=ghdl	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-plugin \
     bash /images/ghdl-yosys-plugin/scripts/install.sh
-
-FROM base AS synlig-yosys-plugin
-ARG SYNLIG_YOSYS_PLUGIN_REPO_URL="https://github.com/chipsalliance/synlig.git"
-ARG SYNLIG_YOSYS_PLUGIN_REPO_COMMIT="967ce78bc1f16264cffb9ed68f15420d272a216f"
-ARG SYNLIG_YOSYS_PLUGIN_NAME="synlig-yosys-plugin"
-COPY --from=yosys	${TOOLS}    ${TOOLS}
-RUN --mount=type=bind,source=images/synlig-yosys-plugin,target=/images/synlig-yosys-plugin \
-    bash /images/synlig-yosys-plugin/scripts/install.sh
 
 FROM base AS slang-yosys-plugin
 ARG SLANG_YOSYS_PLUGIN_REPO_URL="https://github.com/povik/yosys-slang.git"
@@ -487,7 +479,6 @@ COPY --from=xyce-xdm                     ${TOOLS}/              ${TOOLS}/
 COPY --from=yosys                        ${TOOLS}/              ${TOOLS}/
 COPY --from=ghdl-yosys-plugin            ${TOOLS}_add/          ${TOOLS}/
 COPY --from=slang-yosys-plugin           ${TOOLS}_add/          ${TOOLS}/
-COPY --from=synlig-yosys-plugin          ${TOOLS}_add/          ${TOOLS}/
 
 # Copy skeleton and tool version file
 COPY images/iic-osic-tools/skel /
