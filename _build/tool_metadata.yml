@@ -51,6 +51,7 @@
   commit: 0fe599b2afb6708d281543108caf8310912f54af
 - name: openroad_app
   repo: https://github.com/The-OpenROAD-Project/OpenROAD.git
+  commit: edf00dff99f6c40d67a30c0e22a8191c5d2ed9d6
 - name: openvaf
   repo: https://github.com/dwarning/OpenVAF.git
   commit: 2ab0d05fcf9ffd21cc5f49022b7624224cb96b1f
