@@ -26,7 +26,7 @@ EOL
 chmod +x $CMD
 
 # Now run the actual tests
-docker run -it --rm --name $CONTAINER_NAME --user 1000:1000 -e DISPLAY= -v "$PWD":$WORKDIR:rw hpretl/iic-osic-tools:"$TAG" -s "$WORKDIR/$CMD"
+docker run -it --rm --name $CONTAINER_NAME --user "$(id -u):$(id -g)" -e DISPLAY= -v "$PWD":$WORKDIR:rw hpretl/iic-osic-tools:"$TAG" -s "$WORKDIR/$CMD"
 
 # Cleanup
 rm -f $CMD
