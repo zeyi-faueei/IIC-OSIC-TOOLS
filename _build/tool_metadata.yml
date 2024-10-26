@@ -6,13 +6,13 @@
   commit: "v1.1.5"
 - name: gaw3-xschem
   repo: https://github.com/StefanSchippers/xschem-gaw.git
-  commit: 640c672e1ad768b92eb6a15943459a1d2214e1dc
+  commit: d41828de08eef29c2f937d363bc2ecdc2687bfae
 - name: gds3d
   repo: https://github.com/trilomix/GDS3D.git
   commit: dc6d965225c9f5ed2a6faefb7ea30665429060fe
 - name: ghdl
   repo: https://github.com/ghdl/ghdl.git
-  commit: 6ace5ac8cf2b89c3c217d12953de55ae20c64fc8
+  commit: bef043596b4619a3e498985c297318c6fa657a7d
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
   commit: 511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
@@ -24,19 +24,19 @@
   commit: a7884acc04cd94017779893d381b7e93d8895587
 - name: iverilog
   repo: https://github.com/steveicarus/iverilog.git
-  commit: 25a84d5cfcecf67bfb7734929a1df98c4b137ce6
+  commit: d8c3c51ab1190ed3fb26540d7de6177f83e0e75b
 - name: klayout
   repo: https://github.com/KLayout/klayout.git
-  commit: "v0.29.6"
+  commit: "v0.29.8"
 - name: libman
   repo: https://github.com/IHP-GmbH/LibMan.git
   commit: a4537c1fba19966e80408a7b224001d5697ff1e6
 - name: magic
   repo: https://github.com/rtimothyedwards/magic.git
-  commit: "8.3.490"
+  commit: "8.3.497"
 - name: netgen
   repo: https://github.com/rtimothyedwards/netgen.git
-  commit: "1.5.277"
+  commit: "1.5.286"
 - name: ngspice
   repo: https://github.com/danchitnis/ngspice-sf-mirror.git
   commit: "ngspice-43"
@@ -45,19 +45,18 @@
   commit: 154a2724080e3bf15827549bba9f315cd11984fe
 - name: nvc
   repo: https://github.com/nickg/nvc.git
-  commit: "r1.13.3"
+  commit: "r1.14.1"
 - name: open_pdks
   repo: https://github.com/RTimothyEdwards/open_pdks.git
   commit: 0fe599b2afb6708d281543108caf8310912f54af
 - name: openroad_app
   repo: https://github.com/The-OpenROAD-Project/OpenROAD.git
-  commit: b16bda7e82721d10566ff7e2b68f1ff0be9f9e38
 - name: openvaf
   repo: https://github.com/dwarning/OpenVAF.git
-  commit: 0333f5570186ec0e84be889bf8f06e88605d36e4
+  commit: 2ab0d05fcf9ffd21cc5f49022b7624224cb96b1f
 - name: osic-multitool
   repo: https://github.com/iic-jku/osic-multitool.git
-  commit: 08d809eaf884a1ab276a34eec6946466c41111e3
+  commit: c980bb34cac11f22ba4cf16a94919ea61899d62d 
 - name: padring
   repo: https://github.com/donn/padring.git
   commit: b2a64abcc8561d758c0bcb3945117dcb13bd9dca
@@ -66,28 +65,28 @@
   commit: "0.11"
 - name: riscv-gnu-toolchain
   repo: https://github.com/riscv-collab/riscv-gnu-toolchain.git
-  commit: "2024.09.03"
+  commit: "2024.10.26"
 - name: riscv-pk
   repo: https://github.com/riscv-software-src/riscv-pk.git
-  commit: 1a52fa44aba49307137ea2ad5263613da33a877b
+  commit: abadfdc507d5a75b6272dc360e70a80a510c758a
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: 4e9b24973f80357337976360fb9e6cbc6febfec7
+  commit: 0a646461d5c7e0aae4adb7fc62beafdf3a90f96c
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
-  commit: 92565470765f10d99f3a9d9e3ed85f3f92024a20
+  commit: dfe0b708635c4785de6c44b4c1157bbccb22e703
 - name: spike
   repo: https://github.com/riscv-software-src/riscv-isa-sim.git
-  commit: 0cc5ecce053c6dfa44e4a865d2838fc8d7d771dc
+  commit: 88fc84ded155a9e01987c4dfb7a77800e69b232b
 - name: surelog
   repot: https://github.com/chipsalliance/Surelog.git
   commit: "v1.84"
 - name: qflow
   repo: https://github.com/RTimothyEdwards/qflow.git
-  commit: c270a66de59507ac0e0ace7fd79e91a1b9d1dbb2
+  commit: 52ecda1053bcbd2f6ec88b8379c8179e2a849f7a
 - name: qucs-s
   repo: https://github.com/ra3xdh/qucs_s.git
-  commit: "24.3.1"
+  commit: "24.3.2"
 - name: verilator
   repo: https://github.com/verilator/verilator.git
   commit: "v5.028"
@@ -96,7 +95,7 @@
   commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: 4ff7d0e2f8014807ae0c8667850078520e814c2f
+  commit: 7b82abe01703d16c416335a24b4d9d3eb37737f4
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
   commit: "Release-7.8.0"
@@ -105,7 +104,7 @@
   commit: "Release-2.7.0"
 - name: yosys
   repo: https://github.com/YosysHQ/yosys.git
-  commit: "0.45"
+  commit: "0.46"
 - name: yosys_eqy
   repo: https://github.com/YosysHQ/eqy.git
 - name: yosys_sby
