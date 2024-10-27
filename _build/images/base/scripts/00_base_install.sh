@@ -64,6 +64,8 @@ apt -y install \
 	libfftw3-dev \
 	libfindbin-libs-perl \
 	libfl-dev \
+	libfmt8 \
+	libfmt-dev \
 	libgcc-11-dev \
 	libgconf2-dev \
 	libgettextpo-dev \
