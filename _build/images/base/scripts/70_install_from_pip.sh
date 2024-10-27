@@ -29,6 +29,7 @@ pip3 install --upgrade --no-cache-dir \
 	pipdeptree \
 	prettyprinttree \
 	prettytable \
+	pytest \
 	pyyaml \
 	scikit-build \
 	scikit-image \
