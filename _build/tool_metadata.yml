@@ -75,7 +75,7 @@
   commit: 0a646461d5c7e0aae4adb7fc62beafdf3a90f96c
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
-  commit: dfe0b708635c4785de6c44b4c1157bbccb22e703
+  commit: 6743611d6a371b4c41d8bdaaae6f5c5f2519cdcb
 - name: spike
   repo: https://github.com/riscv-software-src/riscv-isa-sim.git
   commit: 88fc84ded155a9e01987c4dfb7a77800e69b232b
