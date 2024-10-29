@@ -168,7 +168,7 @@ _write_credentials () {
 	fi
 
 	# write a JSON file
-	jq ". + [{ \"user\": \"$1\", \"password\": \"$2\", \"port\": $3, \"url\": \"http://$HOSTIP:$3/?password=$2\", \"prefix\": \"$EDA_CONTAINER_PREFIX\", \"datadir\": \"$4\" }]" "$5" > "$5.tmp"
+	jq ". + [{ \"user\": \"$1\", \"password\": \"$2\", \"port\": $3, \"url\": \"http://$HOSTIP:$3/?password=$2\", \"dockervm\": \"$EDA_CONTAINER_PREFIX-$1\", \"datadir\": \"$4\" }]" "$5" > "$5.tmp"
 	mv "$5.tmp" "$5"
 }
 
