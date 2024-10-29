@@ -168,7 +168,7 @@ _write_credentials () {
 	fi
 
 	# write a JSON file
-	jq ". + [{ \"user\": \"$1\", \"password\": \"$2\", \"port\": $3, \"url\": \"http://$HOSTIP:$3/?password=$2\", \"prefix\": \"$EDA_CONTAINER_PREFIX\", \"datadir\": $4 }]" "$5" > "$5.tmp"
+	jq ". + [{ \"user\": \"$1\", \"password\": \"$2\", \"port\": $3, \"url\": \"http://$HOSTIP:$3/?password=$2\", \"prefix\": \"$EDA_CONTAINER_PREFIX\", \"datadir\": \"$4\" }]" "$5" > "$5.tmp"
 	mv "$5.tmp" "$5"
 }
 
@@ -254,8 +254,8 @@ do
 
 	[ $DEBUG = 1 ] && echo "[INFO] Creating container with user=$USERNAME, using port=$PORTNO, with password=$PASSWD."
 	
-	_write_credentials $USERNAME "$PASSWD" $PORTNO "$EDA_CREDENTIAL_FILE"
-	_spin_up_server "$USERNAME" "$PASSWD" "$PORTNO" "$EDA_USER_HOME/$USERNAME"
+	_write_credentials $USERNAME "$PASSWD" $PORTNO "$EDA_USER_HOME/$USERNAME" "$EDA_CREDENTIAL_FILE"
+	_spin_up_server "$USERNAME" "$PASSWD" "$PORTNO"
 done
 
 echo
