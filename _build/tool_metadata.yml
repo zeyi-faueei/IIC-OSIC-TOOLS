@@ -12,13 +12,13 @@
   commit: dc6d965225c9f5ed2a6faefb7ea30665429060fe
 - name: ghdl
   repo: https://github.com/ghdl/ghdl.git
-  commit: bef043596b4619a3e498985c297318c6fa657a7d
+  commit: a938ee87eccdfeba400ae10ecd4e9a2b2438d1e3
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
   commit: 511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
 - name: gtkwave
   repo: https://github.com/gtkwave/gtkwave.git
-  commit: 0a800de96255f7fb11beadb6729fdf670da76ecb
+  commit: 491f24d7e8619cfc1fcc65704ee5c967d1083c18
 - name: irsim
   repo: https://github.com/rtimothyedwards/irsim.git
   commit: a7884acc04cd94017779893d381b7e93d8895587
@@ -66,13 +66,13 @@
   commit: "0.11"
 - name: riscv-gnu-toolchain
   repo: https://github.com/riscv-collab/riscv-gnu-toolchain.git
-  commit: "2024.10.26"
+  commit: "2024.10.28"
 - name: riscv-pk
   repo: https://github.com/riscv-software-src/riscv-pk.git
   commit: abadfdc507d5a75b6272dc360e70a80a510c758a
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: 0a646461d5c7e0aae4adb7fc62beafdf3a90f96c
+  commit: bad0d6ba3dec20355b0156c535bbddf2f926ab37
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
   commit: 6743611d6a371b4c41d8bdaaae6f5c5f2519cdcb
@@ -90,13 +90,13 @@
   commit: "24.3.2"
 - name: verilator
   repo: https://github.com/verilator/verilator.git
-  commit: "v5.028"
+  commit: "v5.030"
 - name: xcircuit
   repo: https://github.com/RTimothyEdwards/XCircuit.git
   commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: 7b82abe01703d16c416335a24b4d9d3eb37737f4
+  commit: 4befd4765c46ac1cf8ee65db60c778b57b3d8138
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
   commit: "Release-7.8.0"
