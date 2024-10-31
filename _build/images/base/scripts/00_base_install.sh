@@ -29,6 +29,7 @@ apt -y install \
 	desktop-file-utils \
 	device-tree-compiler \
 	devscripts \
+	dos2unix \
 	doxygen \
 	expat \
 	flex \
@@ -92,6 +93,7 @@ apt -y install \
 	libpcre3-dev \
 	libpython3.10 \
 	libqhull-dev \
+	libqt5charts5-dev \
 	libqt5multimediawidgets5 \
 	libqt5svg5-dev \
 	libqt5xmlpatterns5-dev \
