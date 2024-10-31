@@ -11,8 +11,9 @@ if [ $# -ne 1 ]; then
 fi
 
 TAG=$1
-CONTAINER_NAME=iic-osic-tools_test
-CMD=_run_tests.sh
+RAND=$(hexdump -e '/1 "%02x"' -n4 < /dev/urandom)
+CONTAINER_NAME=iic-osic-tools_test${RAND}
+CMD=_run_tests_${RAND}.sh
 WORKDIR=/foss/designs
 
 # Check if newer image is available and pull if needed
