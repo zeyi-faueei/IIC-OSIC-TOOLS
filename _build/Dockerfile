@@ -277,7 +277,7 @@ RUN --mount=type=bind,source=images/qflow,target=/images/qflow \
 #######################################################################
 FROM base AS qucs-s
 ARG QUCS_S_REPO_URL="https://github.com/ra3xdh/qucs_s.git"
-ARG QUCS_S_REPO_COMMIT="24.3.2"
+ARG QUCS_S_REPO_COMMIT="24.4.0"
 ARG QUCS_S_NAME="qucs-s"
 RUN --mount=type=bind,source=images/qucs-s,target=/images/qucs-s \
     bash /images/qucs-s/scripts/install.sh
@@ -318,7 +318,7 @@ RUN --mount=type=bind,source=images/slang,target=/images/slang \
 #######################################################################
 FROM riscv-gnu-toolchain AS spike
 ARG SPIKE_REPO_URL="https://github.com/riscv-software-src/riscv-isa-sim.git"
-ARG SPIKE_REPO_COMMIT="88fc84ded155a9e01987c4dfb7a77800e69b232b"
+ARG SPIKE_REPO_COMMIT="f0d4d42913d5a5555848fa32cc68783c2000b3e1"
 ARG SPIKE_NAME="spike"
 RUN --mount=type=bind,source=images/spike,target=/images/spike \
     bash /images/spike/scripts/install.sh
@@ -348,7 +348,7 @@ RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="4befd4765c46ac1cf8ee65db60c778b57b3d8138"
+ARG XSCHEM_REPO_COMMIT="65bd4ce7669c2d8f12b977318da4e4ddd0164b4c"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh
@@ -400,7 +400,7 @@ RUN --mount=type=bind,source=images/ghdl-yosys-plugin,target=/images/ghdl-yosys-
 
 FROM base AS slang-yosys-plugin
 ARG SLANG_YOSYS_PLUGIN_REPO_URL="https://github.com/povik/yosys-slang.git"
-ARG SLANG_YOSYS_PLUGIN_REPO_COMMIT="6743611d6a371b4c41d8bdaaae6f5c5f2519cdcb"
+ARG SLANG_YOSYS_PLUGIN_REPO_COMMIT="5bec681761236fa85cd97fec3bfcc6494b7979d0"
 ARG SLANG_YOSYS_PLUGIN_NAME="slang-yosys-plugin"
 COPY --from=yosys	${TOOLS}    ${TOOLS}
 RUN --mount=type=bind,source=images/slang-yosys-plugin,target=/images/slang-yosys-plugin \

@@ -75,9 +75,10 @@
   commit: bad0d6ba3dec20355b0156c535bbddf2f926ab37
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
-  commit: 6743611d6a371b4c41d8bdaaae6f5c5f2519cdcb
+  commit: 5bec681761236fa85cd97fec3bfcc6494b7979d0
 - name: spike
   repo: https://github.com/riscv-software-src/riscv-isa-sim.git
+  commit: f0d4d42913d5a5555848fa32cc68783c2000b3e1
 - name: surelog
   repot: https://github.com/chipsalliance/Surelog.git
   commit: "v1.84"
@@ -86,6 +87,7 @@
   commit: 52ecda1053bcbd2f6ec88b8379c8179e2a849f7a
 - name: qucs-s
   repo: https://github.com/ra3xdh/qucs_s.git
+  commit: "24.4.0"
 - name: verilator
   repo: https://github.com/verilator/verilator.git
   commit: "v5.030"
@@ -94,6 +96,7 @@
   commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
+  commit: 65bd4ce7669c2d8f12b977318da4e4ddd0164b4c
 - name: xyce
   repo: https://xyce.sandia.gov/files/xyce
   commit: "Xyce-7.8"
