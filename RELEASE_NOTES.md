@@ -2,6 +2,15 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
+## 2024.10
+
+* Adding support for devcontainers (for use of the image inside VSCode).
+* Enable `pyosys` when building `yosys` (for use with OpenLane2).
+* Adding `pytest` (for, e.g., `cocotb`).
+* Add writing the users' data directory to `eda_server_start.sh`, and write the full VM name in the json file.
+* Bump various tool versions.
+* Get `xyce` sourcecode from Sandia homepage instead of GitHub.
+
 ## 2024.09
 
 * Add `slang` plugin for `yosys` for direct SystemVerilog read-in.
