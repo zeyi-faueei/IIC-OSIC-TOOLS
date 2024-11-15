@@ -10,6 +10,8 @@ echo "[INFO] Install support packages via PIP"
 pip3 install --upgrade --no-cache-dir \
 	bottleneck \
 	control \
+	docopt \
+	flake8 \
 	gobject \
 	ipympl \
 	jupyterlab \
