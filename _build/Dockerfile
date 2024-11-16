@@ -358,10 +358,8 @@ RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
 #######################################################################
 # FIXME build trilinos as own image, clean with commit etc.
 FROM base AS xyce
-#ARG XYCE_REPO_URL="https://github.com/Xyce/Xyce.git"
-ARG XYCE_REPO_URL="https://xyce.sandia.gov/files/xyce"
-#ARG XYCE_REPO_COMMIT="Release-7.8.0"
-ARG XYCE_REPO_COMMIT="Xyce-7.8"
+ARG XYCE_REPO_URL="https://github.com/Xyce/Xyce.git"
+ARG XYCE_REPO_COMMIT="Release-7.8.0"
 ARG XYCE_NAME="xyce"
 RUN --mount=type=bind,source=images/xyce,target=/images/xyce \
     bash /images/xyce/scripts/install.sh
