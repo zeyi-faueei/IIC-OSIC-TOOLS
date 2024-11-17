@@ -119,7 +119,7 @@ RUN --mount=type=bind,source=images/gds3d,target=/images/gds3d \
 #######################################################################
 FROM base AS ghdl
 ARG GHDL_REPO_URL="https://github.com/ghdl/ghdl.git"
-ARG GHDL_REPO_COMMIT="9c6f59f9f79b807581c647f80f4f457bd08d88f4"
+ARG GHDL_REPO_COMMIT="f1de234f5e77eb8fb765da945a0bf34ec4abb864"
 ARG GHDL_NAME="ghdl"
 RUN --mount=type=bind,source=images/ghdl,target=/images/ghdl \
     bash /images/ghdl/scripts/install.sh
@@ -308,7 +308,7 @@ RUN --mount=type=bind,source=images/riscv-pk,target=/images/riscv-pk \
 #######################################################################
 FROM base AS slang
 ARG SLANG_REPO_URL="https://github.com/MikePopoloski/slang.git"
-ARG SLANG_REPO_COMMIT="2509bc7687e4934a8315b5065bf1254c1351dc38"
+ARG SLANG_REPO_COMMIT="142cda7418cea80ad8ca2ecec3eaa2acc1beb63a"
 ARG SLANG_NAME="slang"
 RUN --mount=type=bind,source=images/slang,target=/images/slang \
     bash /images/slang/scripts/install.sh
@@ -348,7 +348,7 @@ RUN --mount=type=bind,source=images/xcircuit,target=/images/xcircuit \
 #######################################################################
 FROM base AS xschem
 ARG XSCHEM_REPO_URL="https://github.com/StefanSchippers/xschem.git"
-ARG XSCHEM_REPO_COMMIT="7e699d94e555f03f9b01d2896d72fe6149e53279"
+ARG XSCHEM_REPO_COMMIT="67a44079524ce041ce7bf5e5b9a74cd141bc5f52"
 ARG XSCHEM_NAME="xschem"
 RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
     bash /images/xschem/scripts/install.sh

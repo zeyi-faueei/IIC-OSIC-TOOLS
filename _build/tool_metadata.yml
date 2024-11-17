@@ -12,7 +12,7 @@
   commit: dc6d965225c9f5ed2a6faefb7ea30665429060fe
 - name: ghdl
   repo: https://github.com/ghdl/ghdl.git
-  commit: 9c6f59f9f79b807581c647f80f4f457bd08d88f4
+  commit: f1de234f5e77eb8fb765da945a0bf34ec4abb864
 - name: ghdl-yosys-plugin
   repo: https://github.com/ghdl/ghdl-yosys-plugin.git
   commit: 511412f984d64ed7c46c4bdbd839f4b3c48f6fa5
@@ -72,7 +72,7 @@
   commit: abadfdc507d5a75b6272dc360e70a80a510c758a
 - name: slang
   repo: https://github.com/MikePopoloski/slang.git
-  commit: 2509bc7687e4934a8315b5065bf1254c1351dc38
+  commit: 142cda7418cea80ad8ca2ecec3eaa2acc1beb63a
 - name: slang-yosys-plugin
   repo: https://github.com/povik/yosys-slang.git
   commit: b916ff9f3de3c2ca70b511a5d307e6f5492314f1
@@ -96,7 +96,7 @@
   commit: b6d0b096a6a4730a4255efb50191e03cfa9b5496
 - name: xschem
   repo: https://github.com/StefanSchippers/xschem.git
-  commit: 7e699d94e555f03f9b01d2896d72fe6149e53279
+  commit: 67a44079524ce041ce7bf5e5b9a74cd141bc5f52
 - name: xyce
   repo: https://github.com/Xyce/Xyce.git
   commit: "Release-7.8.0"
