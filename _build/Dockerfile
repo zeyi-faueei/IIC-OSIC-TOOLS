@@ -356,8 +356,10 @@ RUN --mount=type=bind,source=images/xschem,target=/images/xschem \
 #######################################################################
 # Compile xyce & xyce-xdm
 #######################################################################
-# FIXME build trilinos as own image, clean with commit etc.
 FROM base AS xyce
+ARG XYCE_TRILINOS_REPO_URL="https://github.com/trilinos/Trilinos.git"
+ARG XYCE_TRILINOS_REPO_COMMIT="trilinos-release-12-12-1"
+ARG XYCE_TRILINOS_NAME="trilinos"
 ARG XYCE_REPO_URL="https://github.com/Xyce/Xyce.git"
 ARG XYCE_REPO_COMMIT="Release-7.8.0"
 ARG XYCE_NAME="xyce"

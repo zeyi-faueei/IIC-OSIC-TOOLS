@@ -7,9 +7,9 @@ cd "${XYCE_NAME}" || exit 1
 git checkout "${XYCE_REPO_COMMIT}"
 ./bootstrap
 
-git clone --filter=blob:none https://github.com/trilinos/Trilinos trilinos
-cd trilinos || exit 1
-git checkout trilinos-release-12-12-1
+git clone --filter=blob:none "${XYCE_TRILINOS_REPO_URL}" "${XYCE_TRILINOS_NAME}"
+cd "${XYCE_TRILINOS_NAME}" || exit 1
+git checkout "${XYCE_TRILINOS_REPO_COMMIT}"
 mkdir -p parallel_build && cd parallel_build
 cp /images/xyce/scripts/trilinos.reconfigure.sh ./reconfigure.sh
 chmod +x reconfigure.sh

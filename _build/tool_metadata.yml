@@ -82,6 +82,9 @@
 - name: surelog
   repo: https://github.com/chipsalliance/Surelog.git
   commit: "v1.84"
+- name: trilinos
+  repo: https://github.com/trilinos/Trilinos.git
+  commit: "trilinos-release-12-12-1"
 - name: qflow
   repo: https://github.com/RTimothyEdwards/qflow.git
   commit: 52ecda1053bcbd2f6ec88b8379c8179e2a849f7a
