@@ -80,7 +80,7 @@
   repo: https://github.com/riscv-software-src/riscv-isa-sim.git
   commit: 2c67071743d4b55719cee22fdb319df2a0756db7
 - name: surelog
-  repot: https://github.com/chipsalliance/Surelog.git
+  repo: https://github.com/chipsalliance/Surelog.git
   commit: "v1.84"
 - name: qflow
   repo: https://github.com/RTimothyEdwards/qflow.git
