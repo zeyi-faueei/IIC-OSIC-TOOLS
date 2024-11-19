@@ -49,6 +49,12 @@ zoom_menu.select_cell:'Shift+S';
 zoom_menu.zoom_fit:F;
 zoom_menu.zoom_fit_sel:'Ctrl+F';
 zoom_menu.zoom_in:Return;
-zoom_menu.zoom_out:'Shift+Return'
+zoom_menu.zoom_out:'Shift+Return';
+'@lcp_context_menu.hide_empty_layers':4;
+'@lcp_context_menu.invvalid':6;
+'@lcp_context_menu.show_all':1;
+'@lcp_context_menu.show_only':2;
+'@lcp_context_menu.toggle_visibility':3;
+'@lcp_context_menu.valid':5
  </key-bindings>
 </config>
