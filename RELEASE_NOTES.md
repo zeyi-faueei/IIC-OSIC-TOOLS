@@ -2,6 +2,11 @@
 
 This document summarizes the most important changes of the individual releases of the `IIC-OSIC-TOOLS` Docker container.
 
+## 2024.11
+
+* Add useful keybindings to KLayout, set `KLAYOUT_PATH` properly.
+* Bump various tool versions.
+
 ## 2024.10
 
 * Adding support for devcontainers (for use of the image inside VSCode).
