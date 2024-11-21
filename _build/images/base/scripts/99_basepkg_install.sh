@@ -17,7 +17,7 @@ pip3 install --upgrade --no-cache-dir \
 	cocotb==1.9.2 \
 	edalize==0.6.0 \
 	fusesoc==2.4 \
-	gdsfactory==8.19.1 \
+	gdsfactory==8.19.5 \
 	gdspy==1.6.13 \
 	openlane==2.2.5 \
 	openram==1.2.48 \
@@ -28,7 +28,7 @@ pip3 install --upgrade --no-cache-dir \
 	pyverilog==1.3.0 \
 	schemdraw[svgmath]==0.19 \
 	scikit-rf==1.4.1 \
-	siliconcompiler==0.28.7 \
+	siliconcompiler==0.28.8 \
 	spyci==1.0.2 \
 	volare==0.19.2
 
