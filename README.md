@@ -73,7 +73,9 @@ As of the `2022.12` tag, the following open-source process-development kits (PDK
 
 | IHP Microelectronics `sg13g2` |
 |---|
-| Not yet ready to use |
+| `export PDK=sg13g2` |
+| `export PDKPATH=$PDK_ROOT/$PDK` |
+| `export STD_CELL_LIBRARY=sg13g2_stdcell` |
 
 More options for selecting digital standard cell libraries are available; please check the PDK directories.
 
