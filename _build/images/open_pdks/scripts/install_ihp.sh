@@ -11,7 +11,7 @@ fi
 ####################
 
 IHP_PDK="ihp-sg13g2"
-MY_PDK="sg13g2"
+MY_PDK="ihp-sg13g2"
 
 #FIXME don't do a shallow clone until we work on the dev branch
 #git clone --depth=1 https://github.com/IHP-GmbH/IHP-Open-PDK.git ihp
