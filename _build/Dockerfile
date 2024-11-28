@@ -507,3 +507,11 @@ WORKDIR ${DESIGNS}
 USER 1000:1000
 ENTRYPOINT ["/dockerstartup/scripts/ui_startup.sh"]
 CMD ["--wait"]
+
+# extra modification
+## add enviroment to .bashrc
+RUN mkdir -p /headless && touch /headless/.bashrc && \
+    echo 'export PDK_ROOT="/foss/pdks"' >> /headless/.bashrc && \
+    echo 'export PDK="ihp-sg13g2"' >> /headless/.bashrc && \
+    echo 'export PDKPATH="/foss/pdks/ihp-sg13g2"' >> /headless/.bashrc && \
+    echo 'export KLAYOUT_PATH=$PDKPATH/libs.tech/klayout:$PDKPATH/libs.tech/klayout/tech/' >> /headless/.bashrc
