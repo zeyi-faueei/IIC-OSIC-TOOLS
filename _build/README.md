@@ -14,6 +14,7 @@ The installation slightly differs from the original `foss-asic-tools` installati
 
 ```bash
 docker build .
+docker build -t iic-osic-tools:latest .     ## one more specific command
 ```
 
 You can add build parameters accordingly. We strongly recommend using `docker buildx` because of `buildkit` (parallel building) and multi-architecture support. The script `build_all.sh` includes building with `buildx`, on two different machines (for fast `amd64` and `arm64` builds) and pushes both images to the Docker Hub under the same tag. The script includes multiple environment variables with defaults. If you intend to build this image, we encourage you to use this script as a template.
