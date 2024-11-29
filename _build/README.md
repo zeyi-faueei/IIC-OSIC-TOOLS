@@ -14,11 +14,14 @@ The installation slightly differs from the original `foss-asic-tools` installati
 
 ```bash
 docker build .
-docker build -t iic-osic-tools:latest .     ## one more specific command
 ```
 
 You can add build parameters accordingly. We strongly recommend using `docker buildx` because of `buildkit` (parallel building) and multi-architecture support. The script `build_all.sh` includes building with `buildx`, on two different machines (for fast `amd64` and `arm64` builds) and pushes both images to the Docker Hub under the same tag. The script includes multiple environment variables with defaults. If you intend to build this image, we encourage you to use this script as a template.
 The predefined settings are for the IIC build machines, and the image gets pushed with the tags `latest` and `year.month` (e.g., `2022.12`).
+
+Such as you can use a more specific command:
+
+`docker build -t iic-osic-tools:latest .`
 
 ### Detailed container settings
 
@@ -62,6 +65,10 @@ The following command line arguments are supported:
 As some examples already show, these parameters can be passed to the container via Docker:
 
 `docker run -it hpretl/iic-osic-tools:latest --wait --vnc`
+
+or you can use the following command:
+
+`sudo docker run -it --user root iic-osic-tools:latest`
 
 ## Notes
 
